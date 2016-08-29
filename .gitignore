@@ -6,6 +6,9 @@
 *.user
 *.sln.docstates
 
+# Ignore Tests for now
+ScribesRFC.com.Tests/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
