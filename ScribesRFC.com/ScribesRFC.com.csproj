@@ -104,28 +104,24 @@
     <Content Include="Content\Images\Image-Grid\join-scribes-vibrant.png" />
     <Content Include="Content\Images\Image-Grid\join-scribes-yellow-overlay.png" />
     <Content Include="Content\Images\Image-Grid\mens-rugby-blue360.png" />
-    <Content Include="Content\Images\Image-Grid\mens-rugby-greyscale-360.png" />
-    <Content Include="Content\Images\Image-Grid\mens-rugby-greyscale-720.png" />
+    <Content Include="Content\Images\Image-Grid\mens-rugby-greyscale.png" />
     <Content Include="Content\Images\Image-Grid\mens-rugby-yellow-navy-navy.png" />
-    <Content Include="Content\Images\Image-Grid\mens-rugby-yellow-navy-vibr.png" />
+    <Content Include="Content\Images\Image-Grid\mens-rugby-vibrant.png" />
     <Content Include="Content\Images\Image-Grid\mens-rugby-yellow-navy-yell.png" />
-    <Content Include="Content\Images\Image-Grid\mini-rugby-greyscale-360.png" />
-    <Content Include="Content\Images\Image-Grid\mini-rugby-greyscale-720.png" />
+    <Content Include="Content\Images\Image-Grid\mini-rugby-greyscale.png" />
     <Content Include="Content\Images\Image-Grid\mini-rugby-navy-overlay-360.png" />
-    <Content Include="Content\Images\Image-Grid\mini-rugby-vibrant-360.png" />
+    <Content Include="Content\Images\Image-Grid\mini-rugby-vibrant.png" />
     <Content Include="Content\Images\Image-Grid\mini-rugby-yello-overlay-36.png" />
     <Content Include="Content\Images\Image-Grid\scribes-rugby-crest-300.png" />
     <Content Include="Content\Images\Image-Grid\scribes-rugby-crest-720.png" />
     <Content Include="Content\Images\Image-Grid\scribes-rugby-crest.png" />
-    <Content Include="Content\Images\Image-Grid\tag-rugby-greyscale-360.png" />
-    <Content Include="Content\Images\Image-Grid\tag-rugby-greyscale-720.png" />
+    <Content Include="Content\Images\Image-Grid\tag-rugby-greyscale.png" />
     <Content Include="Content\Images\Image-Grid\tag-rugby-navy-overlay-360.png" />
-    <Content Include="Content\Images\Image-Grid\tag-rugby-vibrant-360.png" />
+    <Content Include="Content\Images\Image-Grid\tag-rugby-vibrant.png" />
     <Content Include="Content\Images\Image-Grid\tag-rugby-yellow-overlay-36.png" />
-    <Content Include="Content\Images\Image-Grid\womens-rugby-greyscale-360.png" />
-    <Content Include="Content\Images\Image-Grid\womens-rugby-greyscale-720.png" />
+    <Content Include="Content\Images\Image-Grid\womens-rugby-greyscale.png" />
     <Content Include="Content\Images\Image-Grid\womens-rugby-navy-overlay-3.png" />
-    <Content Include="Content\Images\Image-Grid\womens-rugby-vibrant-360.png" />
+    <Content Include="Content\Images\Image-Grid\womens-rugby-vibrant.png" />
     <Content Include="Content\Images\Image-Grid\womens-rugby-yellow-overlay.png" />
     <Content Include="Content\Images\ladies-team-blue.png" />
     <Content Include="Content\Images\ladies-team-dark.png" />
@@ -231,12 +227,31 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Scribes.js" />
+    <Content Include="Styles\media-min-width-320.css">
+      <DependentUpon>media-min-width-320.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\media-min-width-320.min.css">
+      <DependentUpon>media-min-width-320.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\media-min-width-497.css">
+      <DependentUpon>media-min-width-497.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\media-min-width-497.min.css">
+      <DependentUpon>media-min-width-497.css</DependentUpon>
+    </Content>
     <Content Include="Styles\scribes-rfc.css" />
     <Content Include="Styles\Styles.css">
       <DependentUpon>Styles.less</DependentUpon>
     </Content>
     <Content Include="Styles\Styles.min.css">
       <DependentUpon>Styles.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
@@ -260,6 +275,21 @@
       <DependentUpon>Styles.css</DependentUpon>
     </Content>
     <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Styles\media-min-width-798.less" />
+    <Content Include="Styles\media-min-width-992.less" />
+    <Content Include="Styles\media-min-width-1200.less" />
+    <Content Include="Styles\media-min-width-497.less" />
+    <Content Include="Styles\media-min-width-497.css.map">
+      <DependentUpon>media-min-width-497.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\media-min-width-320.less" />
+    <Content Include="Styles\media-min-width-320.css.map">
+      <DependentUpon>media-min-width-320.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\variables.less" />
+    <Content Include="Styles\variables.css.map">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
