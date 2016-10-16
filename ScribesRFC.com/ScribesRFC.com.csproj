@@ -128,8 +128,10 @@
     <Content Include="Content\Images\ladies-team.png" />
     <Content Include="Content\Images\scribes-image-grid-frame.png" />
     <Content Include="Content\Images\scribes-ladies-600.png" />
+    <Content Include="Content\Images\Scribes-Logo-Transparent-71x100.jpg" />
     <Content Include="Content\Images\Scribes-Mens-Team-Colorized.png" />
     <Content Include="Content\Images\scribes-rugby-crest_homepage-bridge.png" />
+    <Content Include="Content\Images\scribes-rugby-vancouver-brand.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Fonts\oswald-heavy-webfont.ttf" />
@@ -275,7 +277,7 @@
       <DependentUpon>Styles.css</DependentUpon>
     </Content>
     <Content Include="Views\Home\index.cshtml" />
-    <Content Include="Styles\media-min-width-798.less" />
+    <Content Include="Styles\media-min-width-768.less" />
     <Content Include="Styles\media-min-width-992.less" />
     <Content Include="Styles\media-min-width-1200.less" />
     <Content Include="Styles\media-min-width-497.less" />
