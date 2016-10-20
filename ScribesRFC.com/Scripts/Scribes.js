@@ -1,5 +1,5 @@
 ﻿(function () {
-    console.log("Scribes.js running...");
+    console.log("001-Scribes.js running...");
 
     var myPath = "http://localhost:53600/";
 
@@ -28,6 +28,12 @@
     //        currentImg
     //            .attr("src", hoverImgSrc);
     //    });
+
+    // document.onkeyup(function(){
+    //     var focusedElement = document.activeElement;
+
+    //     console.log(focusedElement);
+    // });
 
 
 }());

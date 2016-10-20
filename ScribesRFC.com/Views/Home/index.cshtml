@@ -2,73 +2,35 @@
     ViewBag.Title = "Home";
 }
 
-@*<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="~/Content/Images/scribes-rugby-vancouver-brand.png">
-            </a>
-        </div>
-    </div>
-</nav>*@
 
-<nav id="scribes-home-nav" class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <img alt="Brand" src="~/Content/Images/scribes-rugby-vancouver-brand.png">
-            </button>
-            @*<a class="navbar-brand" href="#">HOME</a>*@
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">MENS RUGBY</a></li>
-                <li><a href="#">WOMENS RUGBY</a></li>
-                <li><a href="#">MINIS RUGBY</a></li>
-                <li><a href="#">TAG RUGBY</a></li>
-                <li><a href="#">JOIN SCRIBES</a></li>
-                @*<li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
-                </ul>
-            </li>*@
-            </ul>
-            @*<form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>*@
-            @*<ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>*@
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
 
 <header class="header container-fluid" id="wrapper">
+    <div id="nav-wrapper" class="row text-center">
+        <nav id="scribes-home-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <img alt="Brand" src="~/Content/Images/scribes-rugby-vancouver-brand.png">
+                    </button>
+                    @*<a class="navbar-brand" href="#">HOME</a>*@
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+                        <li><a tabindex="0" href="#">NEWS</a></li>
+                        <li><a tabindex="0" href="#">MENS RUGBY</a></li>
+                        <li><a tabindex="0" href="#">WOMENS RUGBY</a></li>
+                        <li><a tabindex="0" href="#">MINIS RUGBY</a></li>
+                        <li><a tabindex="0" href="#">TAG RUGBY</a></li>
+                        <li><a tabindex="0" href="#">JOIN SCRIBES</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
     <div class="row">
         <div class="page-heading col-xs-12">
             <div>
@@ -83,12 +45,13 @@
 </header>
 
 <section id="bootstrap-fold" class="container-fluid center-block">
+    
     <div class="row text-center">
         <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-mens-rugby">
+            <a tabindex="0" href="#" id="link-mens-rugby">
                 <div class="gridItem">
                     <figure>
-                        <img src="~/Content/Images/Image-Grid/mens-rugby-vibrant.png" class="img-responsive gridImage" alt="Mens Rugby" />
+                        <img src="~/Content/Images/Image-Grid/mens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Mens Rugby" />
                         <figcaption>MENS RUGBY</figcaption>
                     </figure>
                 </div>
@@ -98,7 +61,7 @@
             <a href="#" id="link-womens-rugby">
                 <div class="gridItem">
                     <figure>
-                        <img src="~/Content/Images/Image-Grid/womens-rugby-vibrant.png" class="img-responsive gridImage" alt="Womens Rugby" />
+                        <img src="~/Content/Images/Image-Grid/womens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Womens Rugby" />
                         <figcaption>WOMENS RUGBY</figcaption>
                     </figure>
                 </div>
@@ -108,7 +71,7 @@
             <a href="#" id="link-minis-rugby">
                 <div class="gridItem" id="grid-mini-rugby">
                     <figure>
-                        <img id="img-grid-mini" src="~/Content/Images/Image-Grid/mini-rugby-vibrant.png" class="img-responsive gridImage" alt="Minis Rugby" />
+                        <img id="img-grid-mini" src="~/Content/Images/Image-Grid/mini-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Minis Rugby" />
                         <figcaption>MINIS RUGBY</figcaption>
                     </figure>
                 </div>
@@ -118,7 +81,7 @@
             <a href="#" id="link-tag-rugby">
                 <div class="gridItem">
                     <figure>
-                        <img src="~/Content/Images/Image-Grid/tag-rugby-vibrant.png" class="img-responsive gridImage" alt="Tag Rugby" />
+                        <img src="~/Content/Images/Image-Grid/tag-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Tag Rugby" />
                         <figcaption>TAG RUGBY</figcaption>
                     </figure>
                 </div>
@@ -138,7 +101,7 @@
             <a href="#" id="link-join-scribes-rugby">
                 <div class="gridItem">
                     <figure>
-                        <img src="~/Content/Images/Image-Grid/join-scribes-vibrant.png" class="img-responsive gridImage" alt="Join Scribes" />
+                        <img src="~/Content/Images/Image-Grid/join-scribes-navy-overlay.png" class="img-responsive gridImage" alt="Join Scribes" />
                         <figcaption>JOIN SCRIBES</figcaption>
                     </figure>
                 </div>

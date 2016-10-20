@@ -1,0 +1,12 @@
+﻿@-ms-viewport {
+  width: auto !important;
+}
+body {
+  /*background-color: @scribes-navy;
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+    background-image: linear-gradient(180deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+    background-position: 0 0, 50% 50%;
+    background-size: auto, cover;
+    background-attachment: fixed;*/
+}
+/*# sourceMappingURL=-ms-hacks.css.map */

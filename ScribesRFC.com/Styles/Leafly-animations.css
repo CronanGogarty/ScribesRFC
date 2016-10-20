@@ -1,0 +1,18 @@
+@keyframes fade-in--grow {
+    0%,20% {
+        opacity:0;
+        -webkit-transform:scale(.8) translateY(-50%);
+        -moz-transform:scale(.8) translateY(-50%);
+        -ms-transform:scale(.8) translateY(-50%);
+        -o-transform:scale(.8) translateY(-50%);
+        transform:scale(.8) translateY(-50%)
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:scale(1) translateY(-50%);
+        -moz-transform:scale(1) translateY(-50%);
+        -ms-transform:scale(1) translateY(-50%);
+        -o-transform:scale(1) translateY(-50%);
+        transform:scale(1) translateY(-50%)
+    }
+}
