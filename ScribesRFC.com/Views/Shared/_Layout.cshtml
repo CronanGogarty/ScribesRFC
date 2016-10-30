@@ -67,12 +67,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
-        $(function () {
-            console.log("jQuery running...");
-        });
-    </script>
+        function is_touch_device() {
+            return 'ontouchstart' in window        // works on most browsers 
+             || navigator.maxTouchPoints;       // works on IE10/11 and Surface
+        };
 
-    <script src="~/Scripts/Scribes.js"></script>
+        if (is_touch_device()) {
+            $(html).addClass('touch')
+        } else {
+            $(html).addClass('no-touch')
+        }
+    </script>
 
 </body>
 

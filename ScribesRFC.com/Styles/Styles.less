@@ -17,7 +17,7 @@ body {
     background-color: @scribes-navy;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:hover, a:active, a:focus {
     text-decoration: none;
 }
 
@@ -38,31 +38,32 @@ section.homepage-section h5 {
 
 p {
     padding: 4px;
+
 }
 
 .header {
-    top: 51px;
-    height: 380px;
+    top: -1px;
+    min-height: 380px;
+    height:100%;
+    max-height:100%;
     background-image: -webkit-linear-gradient(270deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+    background-image: -webkit-linear-gradient(top, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
     background-image: linear-gradient(180deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
     background-position: 0 0, 50% 50%;
     background-size: auto, cover;
     color: @scribes-yellow;
     position: relative;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
 
     .page-heading {
         display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
         height: 380px;
         -webkit-box-pack: center;
-        -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
         -webkit-box-align: center;
-        -webkit-align-items: flex-start;
         -ms-flex-align: center;
         align-items: flex-start;
     }
@@ -71,8 +72,8 @@ p {
         margin-top: 20px;
         margin-bottom: 10px;
         font-family: Oswald, sans-serif;
-        /*font-size: 9em;*/
-        font-size: 80px;
+        /* font-size: 9em; */
+        font-size: 70px;
         line-height: 73px;
         font-weight: 700;
         background-color: #003057;
@@ -80,7 +81,7 @@ p {
     }
 
     h2 {
-        /*font-family: oswaldheavy;*/
+        /* font-family: oswaldheavy; */
         font-family: capture_it_2regular, oswaldheavy, sans-serif;
         background-color: #003057;
     }
@@ -114,49 +115,74 @@ section#bootstrap-fold .gridItem {
     background-color: @scribes-navy;
     position: relative;
     overflow: hidden;
+    border-top:@scribes-1px-yellow-border;
+
 }
+
 
 .gridImage {
     text-align: center;
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     -webkit-transform: scale(1);
     transform: scale(1);
-    -moz-transition: .2s;
-    -o-transition: .2s;
     -webkit-transition: .2s;
     transition: .2s;
+    -webkit-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    -moz-filter: grayscale(1.0) contrast(100%) saturate(100%);
     -ms-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    -o-filter: grayscale(1.0) contrast(100%) saturate(100%);
     filter: grayscale(1.0) contrast(100%) saturate(100%);
 
     &:hover {
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
+        -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
+        -moz-filter: grayscale(0) contrast(140%) saturate(150%);
         -ms-filter: grayscale(0) contrast(140%) saturate(150%);
+        -o-filter: grayscale(0) contrast(140%) saturate(150%);
         filter: grayscale(0) contrast(140%) saturate(150%);
     }
 }
 
+html.touch .gridImage {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
+    -moz-filter: grayscale(0) contrast(140%) saturate(150%);
+    -ms-filter: grayscale(0) contrast(140%) saturate(150%);
+    -o-filter: grayscale(0) contrast(140%) saturate(150%);
+    filter: grayscale(0) contrast(140%) saturate(150%);
+}
+
 #link-about-scribes-rugby .gridImage {
+    -webkit-filter: grayscale(0) brightness(90%);
+    -moz-filter: grayscale(0) brightness(90%);
     -ms-filter: grayscale(0) brightness(90%);
+    -o-filter: grayscale(0) brightness(90%);
     filter: grayscale(0) brightness(90%);
     opacity: 1.0;
 
 
     &:hover {
-        -moz-transform: none;
-        -ms-transform: none;
-        -o-transform: none;
         -webkit-transform: none;
         transform: none;
         opacity: 1.0;
+        -webkit-filter: brightness(100%);
+        -moz-filter: brightness(100%);
         -ms-filter: brightness(100%);
+        -o-filter: brightness(100%);
         filter: brightness(100%);
     }
+}
+
+html.touch #link-about-scribes-rugby  .gridImage {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1.0;
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    filter: brightness(100%);
 }
 
 section#bootstrap-fold figcaption {
@@ -165,7 +191,7 @@ section#bootstrap-fold figcaption {
     margin-bottom: 0;
     width: 100%;
     text-align: center;
-    /*border-radius: 30px;*/
+    /* border-radius: 30px; */
     color: @scribes-yellow;
     background-color: @scribes-navy;
     font-family: capture_it_2regular, oswaldheavy, sans-serif;
@@ -177,6 +203,10 @@ section#bootstrap-fold a {
     &:focus {
         display: none;
     }
+}
+
+section#latest-news {
+    border-top:@scribes-1px-yellow-border;
 }
 
 section#latest-news #wordpress-posts .entry-post {
@@ -203,7 +233,8 @@ section#latest-news #wordpress-posts a {
         color: @scribes-navy;
     }
 
-    &:hover {
+    &:hover,
+    &focus {
         color: lighten(@scribes-navy, 5%);
         text-decoration: underline dashed;
     }
@@ -213,7 +244,7 @@ section#latest-news #wordpress-posts a {
     }
 }
 
-//group the elements after the post heading
+// group the elements after the post heading
 section#latest-news #wordpress-posts h3 ~ div {
     border: @scribes-wp-post-border;
     background-color: @scribes-white;
@@ -257,7 +288,7 @@ section#social-feeds h5 {
 
 #calendar-of-events {
     h2 {
-        /*color:@scribes-navy;*/
+        /* color:@scribes-navy; */
     }
 }
 
@@ -282,26 +313,24 @@ footer {
     padding-bottom: 50px;
     background-color: #003057;
     background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .0), rgba(0, 0, 0, 1.0));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .0), rgba(0, 0, 0, 1.0));
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .0), rgba(0, 0, 0, 1.0));
 }
 
-/*override some bootstrap default values */
+/* override some bootstrap default values */
 #nav-wrapper {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -webkit-align-items: flex-start;
     -ms-flex-align: center;
     align-items: flex-start;
-    border-bottom: 1px solid @scribes-yellow;
+    border-bottom: @scribes-1px-yellow-border;
     position:relative;
-    top: -51px;
+    top: 0;
     background-color:@scribes-navy;
 }
 
@@ -310,11 +339,19 @@ footer {
     background-color: transparent;
     margin-bottom: 0;
     border: none;
+    width:100%;
+    max-width:100%;
 }
 
 #scribes-home-nav .navbar-toggle {
     border: none;
     background-color: transparent;
+    float:none;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+    border-color:@scribes-yellow;
 }
 
 #scribes-home-nav li.active a {
@@ -340,9 +377,9 @@ footer {
         color: @scribes-navy;
         background-color: @scribes-yellow;
         outline: none;
+        -webkit-transition: .5s;
         -moz-transition: .5s;
         -o-transition: .5s;
-        -webkit-transition: .5s;
         transition: .5s;
     }
 
@@ -352,15 +389,15 @@ footer {
 }
 
 
-/*==================================================
+/* ==================================================
 =            Bootstrap 3 Media Queries             =
-==================================================*/
+================================================== */
 
-/*==========  Mobile First Method  ==========*/
+/* ==========  Mobile First Method  ========== */
 
 @import "media-min-width-320.less";
 
-@import "media-min-width-497.css";
+@import "media-min-width-497.less";
 
 @import "media-min-width-768.less";
 

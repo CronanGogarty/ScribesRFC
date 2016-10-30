@@ -3,13 +3,16 @@
     body {
 
         .header {
-            height: 550px;
+            min-height: 550px;
+            height:100%;
+            max-height:100%;
+            
 
             h1 {
                 margin-top: 20px;
                 margin-bottom: 10px;
                 font-family: Oswald, sans-serif;
-                /*font-size: 9em;*/
+                font-size: 80px;
                 font-size: 124px;
                 line-height: 112px;
                 font-weight: 700;
@@ -33,19 +36,19 @@
                 align-items: center;
             }
         }
+    }
 
-        #bootstrap-fold {
+    section#bootstrap-fold .gridItem:nth-child(2n+1) {
+        border-left:@scribes-1px-yellow-border;
+    }
 
-            .row {
-
-                .gridItem {
-                    /*width: 360px;
-                    min-height: 360px;
-                    margin: 60px auto 0 auto;*/
-                    border: none;
-                }
-            }
-        }
+    #scribes-home-nav,
+    #scribes-home-nav .navbar-header {
+        background-color: transparent;
+        margin-bottom: 0;
+        border: none;
+        width:auto;
+        max-width:100%;
     }
      
     #scribes-home-nav a {
