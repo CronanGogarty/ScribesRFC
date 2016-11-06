@@ -122,24 +122,29 @@ section#bootstrap-fold .gridItem {
 
 .gridImage {
     text-align: center;
-    -webkit-transform: scale(1);
-    transform: scale(1);
     -webkit-transition: .2s;
     transition: .2s;
-    -webkit-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -moz-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -ms-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -o-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    filter: grayscale(1.0) contrast(100%) saturate(100%);
-
-    &:hover {
-        -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
         transform: scale(1.1);
         -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
         -moz-filter: grayscale(0) contrast(140%) saturate(150%);
         -ms-filter: grayscale(0) contrast(140%) saturate(150%);
         -o-filter: grayscale(0) contrast(140%) saturate(150%);
         filter: grayscale(0) contrast(140%) saturate(150%);
+
+    &:hover {
+
+
+        
+
+        -webkit-transform: scale(1);
+    transform: scale(1);
+    
+    -webkit-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    -moz-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    -ms-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    -o-filter: grayscale(1.0) contrast(100%) saturate(100%);
+    filter: grayscale(1.0) contrast(100%) saturate(100%);
     }
 }
 
@@ -154,23 +159,22 @@ html.touch .gridImage {
 }
 
 #link-about-scribes-rugby .gridImage {
-    -webkit-filter: grayscale(0) brightness(90%);
-    -moz-filter: grayscale(0) brightness(90%);
-    -ms-filter: grayscale(0) brightness(90%);
-    -o-filter: grayscale(0) brightness(90%);
-    filter: grayscale(0) brightness(90%);
-    opacity: 1.0;
-
-
-    &:hover {
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1.0;
-        -webkit-filter: brightness(100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
         -moz-filter: brightness(100%);
         -ms-filter: brightness(100%);
         -o-filter: brightness(100%);
         filter: brightness(100%);
+    opacity: 1.0;
+
+
+    &:hover {
+
+       -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+        opacity: 1.0;
+        
     }
 }
 
