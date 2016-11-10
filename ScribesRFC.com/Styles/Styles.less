@@ -38,14 +38,13 @@ section.homepage-section h5 {
 
 p {
     padding: 4px;
-
 }
 
 .header {
     top: -1px;
     min-height: 380px;
-    height:100%;
-    max-height:100%;
+    height: 100%;
+    max-height: 100%;
     background-image: -webkit-linear-gradient(270deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
     background-image: -webkit-linear-gradient(top, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
     background-image: linear-gradient(180deg, rgba(0, 48, 87, .5), rgba(0, 48, 87, .5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
@@ -54,7 +53,6 @@ p {
     color: @scribes-yellow;
     position: relative;
     /*background-attachment: fixed;*/
-
     .page-heading {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -115,41 +113,46 @@ section#bootstrap-fold .gridItem {
     background-color: @scribes-navy;
     position: relative;
     overflow: hidden;
-    border-top:@scribes-1px-yellow-border;
-
+    border-top: @scribes-1px-yellow-border;
 }
 
 
 .gridImage {
     text-align: center;
     -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
     -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
-        -moz-filter: grayscale(0) contrast(140%) saturate(150%);
-        -ms-filter: grayscale(0) contrast(140%) saturate(150%);
-        -o-filter: grayscale(0) contrast(140%) saturate(150%);
-        filter: grayscale(0) contrast(140%) saturate(150%);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
+    -moz-filter: grayscale(0) contrast(140%) saturate(150%);
+    -ms-filter: grayscale(0) contrast(140%) saturate(150%);
+    -o-filter: grayscale(0) contrast(140%) saturate(150%);
+    filter: grayscale(0) contrast(140%) saturate(150%);
 
     &:hover {
-
-
-        
-
         -webkit-transform: scale(1);
-    transform: scale(1);
-    
-    -webkit-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -moz-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -ms-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    -o-filter: grayscale(1.0) contrast(100%) saturate(100%);
-    filter: grayscale(1.0) contrast(100%) saturate(100%);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: grayscale(1.0) contrast(100%) saturate(100%);
+        -moz-filter: grayscale(1.0) contrast(100%) saturate(100%);
+        -ms-filter: grayscale(1.0) contrast(100%) saturate(100%);
+        -o-filter: grayscale(1.0) contrast(100%) saturate(100%);
+        filter: grayscale(1.0) contrast(100%) saturate(100%);
     }
 }
 
 html.touch .gridImage {
     -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform: scale(1.0);
     transform: scale(1.0);
     -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
     -moz-filter: grayscale(0) contrast(140%) saturate(150%);
@@ -160,26 +163,33 @@ html.touch .gridImage {
 
 #link-about-scribes-rugby .gridImage {
     -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
     transform: scale(1);
     -webkit-filter: brightness(100%);
-        -moz-filter: brightness(100%);
-        -ms-filter: brightness(100%);
-        -o-filter: brightness(100%);
-        filter: brightness(100%);
+    -moz-filter: brightness(100%);
+    -ms-filter: brightness(100%);
+    -o-filter: brightness(100%);
+    filter: brightness(100%);
     opacity: 1.0;
 
 
     &:hover {
-
-       -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        transform: scale(0.9);
         opacity: 1.0;
-        
     }
 }
 
-html.touch #link-about-scribes-rugby  .gridImage {
+html.touch #link-about-scribes-rugby .gridImage {
     -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
     transform: none;
     opacity: 1.0;
     -webkit-filter: brightness(100%);
@@ -210,7 +220,7 @@ section#bootstrap-fold a {
 }
 
 section#latest-news {
-    border-top:@scribes-1px-yellow-border;
+    border-top: @scribes-1px-yellow-border;
 }
 
 section#latest-news #wordpress-posts .entry-post {
@@ -295,7 +305,7 @@ section#social-feeds h5 {
 
 section#social-feeds .fa {
     text-align: center;
-    font-size:15em;
+    font-size: 15em;
 }
 
 #calendar-of-events {
@@ -309,7 +319,13 @@ section.white-space {
     height: 60px;
 }
 
-section.view-section {
+.hero-block {
+    background-color:@scribes-navy;
+    border:@scribes-1px-yellow-border;
+    top:50px;
+}
+
+/*section.view-section {
     position:relative;
     top:-500px;
     color:@scribes-yellow;
@@ -318,7 +334,6 @@ section.view-section {
         margin-top: 20px;
         margin-bottom: 10px;
         font-family: Oswald, sans-serif;
-        /* font-size: 9em; */
         font-size: 70px;
         line-height: 73px;
         font-weight: 700;
@@ -336,6 +351,8 @@ section.view-section .col-xs-12 {
 
      background-color:@scribes-navy;
 }
+    */
+
 
 #ladies-img {
     height: 600px;
@@ -369,9 +386,9 @@ footer {
     -ms-flex-align: center;
     align-items: flex-start;
     border-bottom: @scribes-1px-yellow-border;
-    position:relative;
+    position: relative;
     top: 0;
-    background-color:@scribes-navy;
+    background-color: @scribes-navy;
 }
 
 #scribes-home-nav,
@@ -379,32 +396,32 @@ footer {
     background-color: transparent;
     margin-bottom: 0;
     border: none;
-    width:100%;
-    max-width:100%;
+    width: 100%;
+    max-width: 100%;
 }
 
 #scribes-home-nav .navbar-toggle {
     border: none;
     background-color: transparent;
-    float:none;
+    float: none;
 }
 
-.navbar-default .navbar-collapse, 
+.navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color:@scribes-yellow;
+    border-color: @scribes-yellow;
 }
 
 #scribes-home-nav li.active a {
     background-color: fadeout(@scribes-yellow, 0);
     color: @scribes-navy;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 #scribes-home-nav a {
     font-family: @scribes-font-menu-top;
     font-size: 1.2em;
     margin: 0 1px 0 0;
-    text-transform:uppercase;
+    text-transform: uppercase;
 
     &:link {
         color: @scribes-yellow;
