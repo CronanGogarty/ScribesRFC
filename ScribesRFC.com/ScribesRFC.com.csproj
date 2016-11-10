@@ -270,6 +270,7 @@
     <Content Include="Content\font-awesome-4.7.0\less\variables.css.map">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -323,7 +324,7 @@
     <Content Include="Styles\Styles.css.map">
       <DependentUpon>Styles.css</DependentUpon>
     </Content>
-    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Styles\media-min-width-768.less" />
     <Content Include="Styles\media-min-width-992.less" />
     <Content Include="Styles\media-min-width-1200.less" />
@@ -339,6 +340,13 @@
     <Content Include="Styles\variables.css.map">
       <DependentUpon>variables.css</DependentUpon>
     </Content>
+    <Content Include="Views\Home\join.cshtml" />
+    <Content Include="Views\Home\MensRugby.cshtml" />
+    <Content Include="Views\Home\WomensRugby.cshtml" />
+    <Content Include="Views\Home\MinisRugby.cshtml" />
+    <Content Include="Views\Home\TagRugby.cshtml" />
+    <Content Include="Views\Home\LatestNews.cshtml" />
+    <Content Include="Views\Home\JoinScribes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

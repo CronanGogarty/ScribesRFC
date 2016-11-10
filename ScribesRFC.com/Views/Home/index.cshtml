@@ -2,241 +2,207 @@
     ViewBag.Title = "Home";
 }
 
-
-
-<header class="header container-fluid" id="wrapper">
-    <div id="nav-wrapper" class="row">
-        <nav id="scribes-home-nav" class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <img alt="Brand" src="~/Content/Images/scribes-rugby-vancouver-brand.png">
-                    </button>
-                    @*<a class="navbar-brand" href="#">HOME</a>*@
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-                        <li><a tabindex="0" href="#">NEWS</a></li>
-                        <li><a tabindex="0" href="#">MENS RUGBY</a></li>
-                        <li><a tabindex="0" href="#">WOMENS RUGBY</a></li>
-                        <li><a tabindex="0" href="#">MINIS RUGBY</a></li>
-                        <li><a tabindex="0" href="#">TAG RUGBY</a></li>
-                        <li><a tabindex="0" href="#">JOIN SCRIBES</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+@section HeroContent {
+<div class="page-heading col-xs-12">
+    <div>
+        <h1>SCRIBES<br>RUGBY</h1>
+        @*<h2>SCRIBES RFC /<br>EAST VAN /<br>50 YEARS /</h2>*@
+        @*<h2>SCRIBES RUGBY FOOTBALL CLUB /<br />VANCOUVER BC /<br />1966 - 2016 /<br />EAST VAN RUGBY /</h2>*@
+        <h2>SCRIBES RUGBY FOOTBALL CLUB<br />VANCOUVER BC<br />50 YEARS!</h2>
     </div>
-    <div class="row">
-        <div class="page-heading col-xs-12">
-            <div>
-                <h1>SCRIBES<br>RUGBY</h1>
-                @*<h2>SCRIBES RFC /<br>EAST VAN /<br>50 YEARS /</h2>*@
-                @*<h2>SCRIBES RUGBY FOOTBALL CLUB /<br />VANCOUVER BC /<br />1966 - 2016 /<br />EAST VAN RUGBY /</h2>*@
-                <h2>SCRIBES RUGBY FOOTBALL CLUB<br />VANCOUVER BC<br />50 YEARS!</h2>
+</div>
+}
+
+<main role="main">
+    <div role="main">
+        <section id="bootstrap-fold" class="container-fluid center-block">
+
+            <div class="row text-center">
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a tabindex="0" href="#" id="link-mens-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="~/Content/Images/Image-Grid/mens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Mens Rugby" />
+                                <figcaption>MENS RUGBY</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a href="#" id="link-womens-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="~/Content/Images/Image-Grid/womens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Womens Rugby" />
+                                <figcaption>WOMENS RUGBY</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a href="#" id="link-minis-rugby">
+                        <div class="gridItem" id="grid-mini-rugby">
+                            <figure>
+                                <img id="img-grid-mini" src="~/Content/Images/Image-Grid/mini-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Minis Rugby" />
+                                <figcaption>MINIS RUGBY</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a href="#" id="link-tag-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="~/Content/Images/Image-Grid/tag-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Tag Rugby" />
+                                <figcaption>TAG RUGBY</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a href="#" id="link-about-scribes-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="~/Content/Images/Image-Grid/scribes-rugby-crest-720.png" class="img-responsive gridImage" alt="About Scribes Rugby" />
+                                <figcaption>ABOUT SCRIBES</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a href="#" id="link-join-scribes-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="~/Content/Images/Image-Grid/join-scribes-navy-overlay.png" class="img-responsive gridImage" alt="Join Scribes" />
+                                <figcaption>JOIN SCRIBES</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-</header>
-
-<section id="bootstrap-fold" class="container-fluid center-block">
-    
-    <div class="row text-center">
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a tabindex="0" href="#" id="link-mens-rugby">
-                <div class="gridItem">
-                    <figure>
-                        <img src="~/Content/Images/Image-Grid/mens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Mens Rugby" />
-                        <figcaption>MENS RUGBY</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-womens-rugby">
-                <div class="gridItem">
-                    <figure>
-                        <img src="~/Content/Images/Image-Grid/womens-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Womens Rugby" />
-                        <figcaption>WOMENS RUGBY</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-minis-rugby">
-                <div class="gridItem" id="grid-mini-rugby">
-                    <figure>
-                        <img id="img-grid-mini" src="~/Content/Images/Image-Grid/mini-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Minis Rugby" />
-                        <figcaption>MINIS RUGBY</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-tag-rugby">
-                <div class="gridItem">
-                    <figure>
-                        <img src="~/Content/Images/Image-Grid/tag-rugby-navy-overlay.png" class="img-responsive gridImage" alt="Tag Rugby" />
-                        <figcaption>TAG RUGBY</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-about-scribes-rugby">
-                <div class="gridItem">
-                    <figure>
-                        <img src="~/Content/Images/Image-Grid/scribes-rugby-crest-720.png" class="img-responsive gridImage" alt="About Scribes Rugby" />
-                        <figcaption>ABOUT SCRIBES</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-            <a href="#" id="link-join-scribes-rugby">
-                <div class="gridItem">
-                    <figure>
-                        <img src="~/Content/Images/Image-Grid/join-scribes-navy-overlay.png" class="img-responsive gridImage" alt="Join Scribes" />
-                        <figcaption>JOIN SCRIBES</figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section id="latest-news" class="homepage-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h4>LATEST NEWS</h4>
-
-                <!-- at this location display a number of Wordpress posts -->
-
-                <div id="wordpress-posts">
-
-                    <div id="post-479" class="entry-post self-clear well well-lg">
-
-                        <h3 class="entry-title"><a href="http://www.scribesrfc.com/0930/this-weeks-game-news/" title="Permalink to This Week&#8217;s Game News" rel="bookmark">This Week&#8217;s Game News</a></h3>
-
-                        <div class="entry-meta entry-meta-top">
-
-                            <p>	Friday, September 30, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
-
-                        </div><!-- .entry-meta-top -->
-
-                        <div class="entry-content self-clear">
-
-                            <p>Last weekend recap. The womens rugby team traveled to Surrey last weekend. We had 18 players turn up for the game and ended up playing 12 a side. Scribes went up 5-0 in the first period of play with a try from Steph. The game went from end to end, but remained 5-0 for the [&hellip;]</p>
-                            <p class="no-break"><span class='st_facebook_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0930/this-weeks-game-news/" title="This Week&#8217;s Game News">View full post »</a></p>
-
-                        </div><!-- .entry content -->
-
-                        <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
-
-
-                    </div><!-- #post-479-->
-
-
-                    <div id="post-467" class="entry-post self-clear well well-lg">
-
-                        <h3 class="entry-title"><a href="http://www.scribesrfc.com/0720/summer-update-2/" title="Permalink to 50th anniversary season opener" rel="bookmark">50th anniversary season opener</a></h3>
-
-                        <div class="entry-meta entry-meta-top">
-
-                            <p>	Wednesday, July 20, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
-
-                        </div><!-- .entry-meta-top -->
-
-                        <div class="entry-content self-clear">
-
-                            <p>Photographs of the day can be found here. Just a reminder the Scribes RFC 50th Season kicks off this coming Saturday September 17, 2016. Venue: John Hendry Park / Trout Lake Scribes Women vs Seattle at 11.30am Scribes Men vs Chilliwack at 1.00pm Scribes Social Dues can be purchased for C$150.00 – this price includes [&hellip;]</p>
-                            <p class="no-break"><span class='st_facebook_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0720/summer-update-2/" title="50th anniversary season opener">View full post »</a></p>
-                        </div><!-- .entry content -->
-
-                        <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
-
-
-                    </div><!-- #post-467-->
-
-
-                    <div id="post-465" class="entry-post self-clear well well-lg">
-
-                        <h3 class="entry-title"><a href="http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/" title="Permalink to Scribes RFC Update. April 22" rel="bookmark">Scribes RFC Update. April 22</a></h3>
-
-                        <div class="entry-meta entry-meta-top">
-
-                            <p>	Friday, April 22, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
-
-                        </div><!-- .entry-meta-top -->
-
-                        <div class="entry-content self-clear">
-
-                            <p>Upcoming dates: &#8211; End of Season Banquet &amp; awards night The end of season banquet will take place on April 30th at the Library Square. We hope to see all players, supporters and friends of the Scribes attending again this year. Please ask Marcus or usual suspects on the exec for tickets. &#8211; Club day [&hellip;]</p>
-                            <p class="no-break"><span class='st_facebook_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/" title="Scribes RFC Update. April 22">View full post »</a></p>
-                        </div><!-- .entry content -->
-
-                        <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
-
-
-                    </div><!-- #post-465-->
-
-                </div><!-- end Wordpress postst -->
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="social-feeds" class="homepage-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h4 class="text-uppercase">Social Media</h4>
+        <section id="latest-news" class="homepage-section">
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <h5 class="text-uppercase">Facebook</h5>
-                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-sm-4">
-                        <h5 class="text-uppercase">Twitter</h5>
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-sm-4">
-                        <h5 class="text-uppercase">Instagram</h5>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </div>
+                    <div class="col-xs-12">
+                        <h4>LATEST NEWS</h4>
 
+                        <!-- at this location display a number of Wordpress posts -->
+
+                        <div id="wordpress-posts">
+
+                            <div id="post-479" class="entry-post self-clear well well-lg">
+
+                                <h3 class="entry-title"><a href="http://www.scribesrfc.com/0930/this-weeks-game-news/" title="Permalink to This Week&#8217;s Game News" rel="bookmark">This Week&#8217;s Game News</a></h3>
+
+                                <div class="entry-meta entry-meta-top">
+
+                                    <p>	Friday, September 30, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
+
+                                </div><!-- .entry-meta-top -->
+
+                                <div class="entry-content self-clear">
+
+                                    <p>Last weekend recap. The womens rugby team traveled to Surrey last weekend. We had 18 players turn up for the game and ended up playing 12 a side. Scribes went up 5-0 in the first period of play with a try from Steph. The game went from end to end, but remained 5-0 for the [&hellip;]</p>
+                                    <p class="no-break"><span class='st_facebook_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='This Week&#8217;s Game News' st_url='http://www.scribesrfc.com/0930/this-weeks-game-news/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0930/this-weeks-game-news/" title="This Week&#8217;s Game News">View full post »</a></p>
+
+                                </div><!-- .entry content -->
+
+                                <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
+
+
+                            </div><!-- #post-479-->
+
+
+                            <div id="post-467" class="entry-post self-clear well well-lg">
+
+                                <h3 class="entry-title"><a href="http://www.scribesrfc.com/0720/summer-update-2/" title="Permalink to 50th anniversary season opener" rel="bookmark">50th anniversary season opener</a></h3>
+
+                                <div class="entry-meta entry-meta-top">
+
+                                    <p>	Wednesday, July 20, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
+
+                                </div><!-- .entry-meta-top -->
+
+                                <div class="entry-content self-clear">
+
+                                    <p>Photographs of the day can be found here. Just a reminder the Scribes RFC 50th Season kicks off this coming Saturday September 17, 2016. Venue: John Hendry Park / Trout Lake Scribes Women vs Seattle at 11.30am Scribes Men vs Chilliwack at 1.00pm Scribes Social Dues can be purchased for C$150.00 – this price includes [&hellip;]</p>
+                                    <p class="no-break"><span class='st_facebook_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='50th anniversary season opener' st_url='http://www.scribesrfc.com/0720/summer-update-2/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0720/summer-update-2/" title="50th anniversary season opener">View full post »</a></p>
+                                </div><!-- .entry content -->
+
+                                <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
+
+
+                            </div><!-- #post-467-->
+
+
+                            <div id="post-465" class="entry-post self-clear well well-lg">
+
+                                <h3 class="entry-title"><a href="http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/" title="Permalink to Scribes RFC Update. April 22" rel="bookmark">Scribes RFC Update. April 22</a></h3>
+
+                                <div class="entry-meta entry-meta-top">
+
+                                    <p>	Friday, April 22, 2016										<span class="posted-in">Posted in  <a href="http://www.scribesrfc.com/category/news/" rel="category tag">News</a></span></p>
+
+                                </div><!-- .entry-meta-top -->
+
+                                <div class="entry-content self-clear">
+
+                                    <p>Upcoming dates: &#8211; End of Season Banquet &amp; awards night The end of season banquet will take place on April 30th at the Library Square. We hope to see all players, supporters and friends of the Scribes attending again this year. Please ask Marcus or usual suspects on the exec for tickets. &#8211; Club day [&hellip;]</p>
+                                    <p class="no-break"><span class='st_facebook_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Facebook'></span><span class='st_twitter_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Twitter'></span><span class='st_email_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Email'></span><span class='st_sharethis_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='ShareThis'></span><span class='st_fblike_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Facebook Like'></span><span class='st_plusone_buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Google +1'></span><span class='st_pinterest _buttons' st_title='Scribes RFC Update. April 22' st_url='http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/' displaytext='Pinterest'></span></p><p><a href="http://www.scribesrfc.com/0422/scribes-rfc-update-april-22/" title="Scribes RFC Update. April 22">View full post »</a></p>
+                                </div><!-- .entry content -->
+
+                                <div class="entry-meta entry-meta-bottom"><p></p></div><!-- entry-meta -->
+
+
+                            </div><!-- #post-465-->
+
+                        </div><!-- end Wordpress postst -->
+
+                    </div>
                 </div>
             </div>
-        </div>
-</section>
+        </section>
 
-<section class="homepage-section">
-    <div class="container-fluid" id="ladies-img">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4>CALENDAR OF EVENTS</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        <section id="social-feeds" class="homepage-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="text-uppercase">Social Media</h4>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h5 class="text-uppercase">Facebook</h5>
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-sm-4">
+                                <h5 class="text-uppercase">Twitter</h5>
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-sm-4">
+                                <h5 class="text-uppercase">Instagram</h5>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section id="calendar-of-events" class="homepage-section"></section>
+        <section class="homepage-section">
+            <div class="container-fluid" id="ladies-img">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>CALENDAR OF EVENTS</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3"><img src="~/Content/Images/scribes-rugby-crest_homepage-bridge.png" width="233" height="330"></div>
-            <div class="col-lg-9"></div>
-        </div>
+        <section id="calendar-of-events" class="homepage-section"></section>
+
     </div>
-</footer>
+</main>

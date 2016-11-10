@@ -309,6 +309,34 @@ section.white-space {
     height: 60px;
 }
 
+section.view-section {
+    position:relative;
+    top:-500px;
+    color:@scribes-yellow;
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: Oswald, sans-serif;
+        /* font-size: 9em; */
+        font-size: 70px;
+        line-height: 73px;
+        font-weight: 700;
+        background-color: @scribes-navy;
+        height: auto;
+    }
+
+    h2 {
+        font-family: capture_it_2regular, oswaldheavy, sans-serif;
+        text-align:left;
+    }
+}
+
+section.view-section .col-xs-12 {
+
+     background-color:@scribes-navy;
+}
+
 #ladies-img {
     height: 600px;
     padding: 40px 0;
@@ -369,12 +397,14 @@ footer {
 #scribes-home-nav li.active a {
     background-color: fadeout(@scribes-yellow, 0);
     color: @scribes-navy;
+    text-transform:uppercase;
 }
 
 #scribes-home-nav a {
     font-family: @scribes-font-menu-top;
     font-size: 1.2em;
     margin: 0 1px 0 0;
+    text-transform:uppercase;
 
     &:link {
         color: @scribes-yellow;
