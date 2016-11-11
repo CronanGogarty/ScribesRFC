@@ -380,6 +380,13 @@ footer .container .row {
   background-color: transparent;
   float: none;
 }
+#scribes-home-nav .navbar-toggle .icon-bar {
+  border-radius: 16px;
+  display: block;
+  height: 10px;
+  margin: 17px 0;
+  width: 76px;
+}
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #ffd600;
