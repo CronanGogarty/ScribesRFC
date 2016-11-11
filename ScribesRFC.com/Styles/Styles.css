@@ -34,6 +34,13 @@ html {
 }
 body {
   background-color: #003057;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+  background-image: -webkit-linear-gradient(top, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+  background-image: linear-gradient(180deg, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 a:link,
 a:visited,
@@ -61,19 +68,11 @@ p {
   padding: 4px;
 }
 .header {
+  position: relative;
   top: -1px;
-  min-height: 380px;
   height: 100%;
   max-height: 100%;
-  background-image: -webkit-linear-gradient(270deg, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
-  background-image: -webkit-linear-gradient(top, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
-  background-image: linear-gradient(180deg, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   color: #ffd600;
-  position: relative;
   /*background-attachment: fixed;*/
 }
 .header .page-heading {
@@ -222,6 +221,7 @@ section#bootstrap-fold a:focus {
 }
 section#latest-news {
   border-top: 1px solid #ffd600;
+  background-color: #003057;
 }
 section#latest-news #wordpress-posts .entry-post {
   padding-bottom: 44px;
@@ -295,25 +295,29 @@ section.white-space {
   height: 60px;
 }
 .hero-block {
+  position: relative;
+  /*top:50px;*/
   background-color: #003057;
   border: 1px solid #ffd600;
-  top: 50px;
+  padding: 1rem;
+  margin-top: 50px;
+}
+#hero-row .hero-content .hero-block h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Oswald, sans-serif;
+  font-size: 70px;
+  line-height: 73px;
+  font-weight: 700;
+  background-color: #003057;
+  height: auto;
 }
 /*section.view-section {
     position:relative;
     top:-500px;
     color:@scribes-yellow;
 
-    h1 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-family: Oswald, sans-serif;
-        font-size: 70px;
-        line-height: 73px;
-        font-weight: 700;
-        background-color: @scribes-navy;
-        height: auto;
-    }
+    
 
     h2 {
         font-family: capture_it_2regular, oswaldheavy, sans-serif;
@@ -336,13 +340,16 @@ section.view-section .col-xs-12 {
 }
 footer {
   height: auto;
-  margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #003057;
   background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #000000);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000);
+}
+footer .container .row {
+  display: flex;
+  align-items: center;
 }
 /* override some bootstrap default values */
 #nav-wrapper {
@@ -414,10 +421,6 @@ footer {
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 497px) {
-  body .header {
-    height: 100%;
-    max-height: 100%;
-  }
   body .header .page-heading {
     height: 500px;
   }
@@ -428,11 +431,6 @@ footer {
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-  body .header {
-    min-height: 550px;
-    height: 100%;
-    max-height: 100%;
-  }
   body .header h1 {
     margin-top: 20px;
     margin-bottom: 10px;

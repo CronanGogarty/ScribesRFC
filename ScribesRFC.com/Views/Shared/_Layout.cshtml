@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/font-awesome-4.7.0/css/font-awesome.min.css")" type="text/css">
     <link rel="stylesheet" href="@Url.Content("~/Styles/Styles.min.css")" type="text/css" media="screen">
     <!--<link rel="stylesheet" href="~/Styles/Styles.css" media="screen">-->
-
     <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -38,7 +37,7 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <header class="header container-fluid" id="wrapper">
         <div id="nav-wrapper" class="row">
             <nav id="scribes-home-nav" class="navbar navbar-default">
@@ -59,15 +58,15 @@
                             <li @ViewBag.NavMens>@Html.ActionLink("Mens Rugby", "MensRugby")</li>
                             <li @ViewBag.NavWomens>@Html.ActionLink("Womens Rugby", "WomensRugby")</li>
                             <li @ViewBag.NavMinis>@Html.ActionLink("Minis Rugby", "MinisRugby")</li>
-                            <li @ViewBag.NavNews>@Html.ActionLink("Tag Rugby", "TagRugby")</li>
+                            <li @ViewBag.NavTag>@Html.ActionLink("Tag Rugby", "TagRugby")</li>
                             <li @ViewBag.NavJoin>@Html.ActionLink("Join Scribes", "JoinScribes")</li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </div>
-        <div class="row">
-            @RenderSection("HeroContent", required:false)
+        <div id="hero-row" class="row">
+            @RenderSection("HeroContent", required: false)
         </div>
 
     </header>
@@ -78,8 +77,27 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3"><img src="~/Content/Images/scribes-rugby-crest_homepage-bridge.png" width="233" height="330"></div>
-                <div class="col-lg-9"></div>
+                <div class="col-lg-4"><img src="~/Content/Images/scribes-rugby-crest_homepage-bridge.png" width="233" height="330"></div>
+                <div class="col-lg-4 text-right">
+                    <ul class="nav">
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-right">
+                    <ul class="nav">
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
@@ -88,15 +106,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script>try { Modernizr } catch (e) { document.write('<script src="/Scripts/modernizr-2.8.3.js"><\/script>') }</script>
     @*<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
-            crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/Scripts/jquery-2.2.3.min.js"><\/script>')</script>*@
+                crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/Scripts/jquery-2.2.3.min.js"><\/script>')</script>*@
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script>
         function is_touch_device() {
-            return 'ontouchstart' in window        // works on most browsers 
+            return 'ontouchstart' in window        // works on most browsers
              || navigator.maxTouchPoints;       // works on IE10/11 and Surface
         };
 

@@ -345,8 +345,8 @@
     <Content Include="Views\Home\WomensRugby.cshtml" />
     <Content Include="Views\Home\MinisRugby.cshtml" />
     <Content Include="Views\Home\TagRugby.cshtml" />
-    <Content Include="Views\Home\LatestNews.cshtml" />
     <Content Include="Views\Home\JoinScribes.cshtml" />
+    <Content Include="Views\Home\hero_TEMPLATE.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
