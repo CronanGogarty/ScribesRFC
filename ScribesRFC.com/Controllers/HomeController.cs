@@ -51,5 +51,10 @@ namespace ScribesRFC.com.Controllers
             ViewBag.NavTag = "class=active";
             return View();
         }
+
+        public ActionResult AboutScribes()
+        {
+            return View();
+        }
     }
 }

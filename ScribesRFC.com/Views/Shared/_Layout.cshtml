@@ -58,13 +58,13 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li @ViewBag.NavHome>@Html.ActionLink("Home", "Index")</li>
-                            <li @ViewBag.NavNews>@Html.ActionLink("News", "LatestNews")</li>
-                            <li @ViewBag.NavMens>@Html.ActionLink("Mens Rugby", "MensRugby")</li>
-                            <li @ViewBag.NavWomens>@Html.ActionLink("Womens Rugby", "WomensRugby")</li>
-                            <li @ViewBag.NavMinis>@Html.ActionLink("Minis Rugby", "MinisRugby")</li>
-                            <li @ViewBag.NavTag>@Html.ActionLink("Tag Rugby", "TagRugby")</li>
-                            <li @ViewBag.NavJoin>@Html.ActionLink("Join Scribes", "JoinScribes")</li>
+                            <li @ViewBag.NavHome>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li @ViewBag.NavNews>@Html.ActionLink("News", "LatestNews", "Home")</li>
+                            <li @ViewBag.NavMens>@Html.ActionLink("Mens Rugby", "MensRugby", "Home")</li>
+                            <li @ViewBag.NavWomens>@Html.ActionLink("Womens Rugby", "WomensRugby", "Home")</li>
+                            <li @ViewBag.NavMinis>@Html.ActionLink("Minis Rugby", "MinisRugby", "Home")</li>
+                            <li @ViewBag.NavTag>@Html.ActionLink("Tag Rugby", "TagRugby", "Home")</li>
+                            <li @ViewBag.NavJoin>@Html.ActionLink("Join Scribes", "JoinScribes", "Home")</li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -80,20 +80,20 @@
 
 
     <footer>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-4"><img src="@Url.Content("~/Content/Images/scribes-rugby-crest_homepage-bridge.png")" width="233" height="330"></div>
-                <div class="col-lg-4 text-right">
+                <div class="col-md-4 text-left"><img src="@Url.Content("~/Content/Images/scribes-rugby-crest_homepage-bridge.png")" width="233" height="330" class="img-responsive"></div>
+                <div class="col-md-4 text-right">
                     <ul class="nav">
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                        <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                        <li><a href="@Url.Content("~/Pages/Dues/")">Dues</a></li>
+                        <li><a href="@Url.Content("~/Pages/Insurance/")">BC Rugby Insurance Plan</a></li>
+                        <li><a href="@Url.Content("~/Pages/Locations/")">Locations</a></li>
+                        <li><a href="@Url.Content("~/Pages/Sponsors/")">Sponsors</a></li>
+                        <li><a href="@Url.Content("~/Pages/Teams/")">Teams</a></li>
+                        @*<li><a href="@Url.Content("~/Home/")">Link Home</a></li>*@
                     </ul>
                 </div>
-                <div class="col-lg-4 text-right">
+                <div class="col-md-4 text-right">
                     <ul class="nav">
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
@@ -104,6 +104,9 @@
                     </ul>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">&copy; Scribes Rugby Football Club @System.DateTime.Today.Year</div>
+            </div>
         </div>
     </footer>
 
@@ -111,8 +114,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script>try { Modernizr } catch (e) { document.write('<script src="/Scripts/modernizr-2.8.3.js"><\/script>') }</script>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
-                crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="/Scripts/jquery-2.2.3.min.js"><\/script>')</script>
+            crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/Scripts/jquery-2.2.3.min.js"><\/script>')</script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

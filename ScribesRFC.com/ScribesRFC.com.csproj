@@ -310,6 +310,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -347,6 +348,13 @@
     <Content Include="Views\Home\TagRugby.cshtml" />
     <Content Include="Views\Home\JoinScribes.cshtml" />
     <Content Include="Views\Home\hero_TEMPLATE.cshtml" />
+    <Content Include="Views\Home\LatestNews.cshtml" />
+    <Content Include="Views\Pages\Dues.cshtml" />
+    <Content Include="Views\Pages\Insurance.cshtml" />
+    <Content Include="Views\Home\AboutScribes.cshtml" />
+    <Content Include="Views\Pages\Locations.cshtml" />
+    <Content Include="Views\Pages\Sponsors.cshtml" />
+    <Content Include="Views\Pages\Teams.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
