@@ -39,7 +39,7 @@ body {
   background-image: linear-gradient(180deg, rgba(0, 48, 87, 0.5), rgba(0, 48, 87, 0.5)), url('../Content/Images/Scribes-Mens-Team-Colorized-min.png');
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-size: cover;
 }
 a:link,
@@ -218,9 +218,11 @@ section#bootstrap-fold figcaption {
   font-size: 2em;
   opacity: 0.85;
 }
-section#bootstrap-fold a:focus {
-  display: none;
-}
+/*section#bootstrap-fold a {
+    &:focus {
+        display: none;
+    }
+}*/
 section#latest-news {
   border-top: 1px solid #ffd600;
   background-color: #003057;
@@ -292,8 +294,12 @@ section#social-feeds .fa {
 .social-container {
   border-right: 1px solid #003057;
 }
-.social-container:nth-of-type(2) {
+.social-container:nth-of-type(3) {
   border-right: 0;
+}
+.social-container blockquote {
+  padding: 0;
+  border: 0;
 }
 #calendar-of-events h2 {
   /* color:@scribes-navy; */
@@ -371,6 +377,10 @@ footer .container .row {
   display: flex;
   align-items: center;
 }
+#footer-logo {
+  margin: 0 auto;
+  min-width: 233px;
+}
 /* override some bootstrap default values */
 #nav-wrapper {
   display: -webkit-box;
@@ -406,6 +416,7 @@ footer .container .row {
   height: 10px;
   margin: 17px 0;
   width: 76px;
+  background-color: #ffd600 !important;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -519,6 +530,9 @@ footer .container .row {
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
+  body {
+    background-attachment: fixed;
+  }
   body .header {
     min-height: 660px;
     height: 100%;

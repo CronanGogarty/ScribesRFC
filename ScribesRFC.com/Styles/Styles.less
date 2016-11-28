@@ -28,7 +28,7 @@ body {
     //background-position: 0 0, 50% 50%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     //background-size: auto, cover;
     background-size: cover;
 }
@@ -222,11 +222,11 @@ section#bootstrap-fold figcaption {
     opacity: 0.85;
 }
 
-section#bootstrap-fold a {
+/*section#bootstrap-fold a {
     &:focus {
         display: none;
     }
-}
+}*/
 
 section#latest-news {
     border-top: @scribes-1px-yellow-border;
@@ -321,8 +321,13 @@ section#social-feeds .fa {
 .social-container {
     border-right:@scribes-1px-navy-border;
 }
-.social-container:nth-of-type(2) {
+.social-container:nth-of-type(3) {
     border-right:0;
+}
+
+.social-container blockquote {
+    padding:0;
+    border:0;
 }
 
 #calendar-of-events {
@@ -414,6 +419,11 @@ footer .container .row {
     align-items: center;
 }
 
+#footer-logo {
+    margin:0 auto;
+    min-width:233px;
+}
+
 /* override some bootstrap default values */
 #nav-wrapper {
     display: -webkit-box;
@@ -452,7 +462,9 @@ footer .container .row {
     height: 10px;
     margin: 17px 0;
     width: 76px;
+    background-color: @scribes-yellow !important;
 }
+
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {

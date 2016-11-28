@@ -19,10 +19,19 @@
 <main role="main">
     <div role="main">
         <section id="bootstrap-fold" class="container-fluid center-block">
-
             <div class="row text-center">
                 <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-                    <a tabindex="0" href="@Url.Content("~/Home/MensRugby/")" id=" link-mens-rugby">
+                    <a href="@Url.Content("~/Home/JoinScribes/")" id="link-join-scribes-rugby">
+                        <div class="gridItem">
+                            <figure>
+                                <img src="@Url.Content("~/Content/Images/Image-Grid/join-scribes-navy-overlay-min.png")" class="img-responsive gridImage" alt="Join Rugby Team Vancouver BC" />
+                                <figcaption>JOIN SCRIBES</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                    <a tabindex="0" href="@Url.Content("~/Home/MensRugby/")" id="link-mens-rugby">
                         <div class="gridItem">
                             <figure>
                                 <img src="@Url.Content("~/Content/Images/Image-Grid/mens-rugby-navy-overlay-min.png")" class="img-responsive gridImage" alt="Mens Rugby Vancouver BC" />
@@ -51,7 +60,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-push-4 remove-padding">
                     <a href="@Url.Content("~/Home/TagRugby/")" id="link-tag-rugby">
                         <div class="gridItem">
                             <figure>
@@ -61,7 +70,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-pull-4 remove-padding">
                     <a href="@Url.Content("~/Home/AboutScribes/")" id="link-about-scribes-rugby">
                         <div class="gridItem">
                             <figure>
@@ -71,16 +80,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
-                    <a href="@Url.Content("~/Home/JoinScribes/")" id="link-join-scribes-rugby">
-                        <div class="gridItem">
-                            <figure>
-                                <img src="@Url.Content("~/Content/Images/Image-Grid/join-scribes-navy-overlay-min.png")" class="img-responsive gridImage" alt="Join Rugby Team Vancouver BC" />
-                                <figcaption>JOIN SCRIBES</figcaption>
-                            </figure>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </section>
 
@@ -205,7 +205,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 social-container">
+                    <div class="col-sm-4 social-container">
                         <div class="fb-page"
                              data-href="https://www.facebook.com/ScribesRFC/"
                              data-tabs="timeline,events,messages"
@@ -213,11 +213,14 @@
                              data-adapt-container-width="true"
                              data-hide-cover="false"
                              data-show-facepile="true"
-                             data-width="500px"><blockquote cite="https://www.facebook.com/ScribesRFC/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ScribesRFC/">Scribes RFC</a></blockquote></div>
+                             data-width="500px"><blockquote cite="https://www.facebook.com/ScribesRFC/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ScribesRFC/">Scribes RFC Faceboks</a></blockquote></div>
                     </div>
-                    <div class="col-sm-6 social-container">
-                        <a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/ScribesRFC">Tweets by ScribesRFC</a>
+                    <div class="col-sm-4 social-container">
+                        <blockquote><a class="twitter-timeline" data-height="500" data-theme="light" href="https://twitter.com/ScribesRFC">Tweets by ScribesRFC</a></blockquote>
                         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="col-sm-4 social-container">
+                        <blockquote><a href="#">Scribes RFC Instagram</a></blockquote>
                     </div>
                 </div>
             </div>
