@@ -2,8 +2,6 @@
 @media only screen and (min-width : 992px) {
     body {
 
-        background-attachment: fixed;
-
         .header {
             min-height: 660px;
             height:100%;
@@ -70,5 +68,26 @@
     #scribes-home-nav a {
         font-family: @scribes-font-menu-top;
         font-size: 1.0em;
+    }
+
+    section#social-feeds {
+        padding-bottom: 60px;
+    }
+
+    #social-small {
+        display:none;
+    }
+    #social-medium {
+        display:block;
+    }
+    #social-large {
+        display:none;
+    }
+
+    .social-container {
+        border-right:1px solid #003057;
+    }
+    .social-container:last-of-type {
+        border-right:0;
     }
 }
