@@ -3,6 +3,9 @@
 
     var myPath = "http://localhost:53600/";
 
+    var navHeight = $('#scribes-home-nav').outerHeight();
+    $('.header .page-heading').css('margin-bottom', -navHeight);
+
     //$('#grid-mini-rugby').mouseover(function () {
     //    $('#img-grid-mini')
     //        .attr("src", myPath + "Content/Images/Image-Grid/mini-rugby-vibrant-360.png");

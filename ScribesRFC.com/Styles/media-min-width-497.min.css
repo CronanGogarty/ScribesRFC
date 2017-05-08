@@ -1,1 +1,1 @@
-﻿@media only screen and (min-width:480px){body .header .page-heading{height:500px}body .header h1{font-size:100px;line-height:90px}}
+﻿@media only screen and (min-width:480px){body .header .page-heading{min-height:500px;height:100vh}body .header h1{font-size:100px;line-height:90px}}

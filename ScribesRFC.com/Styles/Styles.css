@@ -81,7 +81,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 380px;
+  min-height: 380px;
+  height: 100vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -136,11 +137,11 @@ section#bootstrap-fold .gridItem {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
   -webkit-filter: grayscale(0) contrast(140%) saturate(150%);
   -moz-filter: grayscale(0) contrast(140%) saturate(150%);
   -ms-filter: grayscale(0) contrast(140%) saturate(150%);
@@ -148,11 +149,11 @@ section#bootstrap-fold .gridItem {
   filter: grayscale(0) contrast(140%) saturate(150%);
 }
 .gridImage:hover {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
   -webkit-filter: grayscale(1) contrast(100%) saturate(100%);
   -moz-filter: grayscale(1) contrast(100%) saturate(100%);
   -ms-filter: grayscale(1) contrast(100%) saturate(100%);
@@ -185,11 +186,11 @@ html.touch .gridImage {
   opacity: 1.0;
 }
 #link-about-scribes-rugby .gridImage:hover {
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
   opacity: 1.0;
 }
 html.touch #link-about-scribes-rugby .gridImage {
@@ -494,7 +495,8 @@ footer .row div {
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
   body .header .page-heading {
-    height: 500px;
+    min-height: 500px;
+    height: 100vh;
   }
   body .header h1 {
     font-size: 100px;
@@ -527,7 +529,8 @@ footer .row div {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 550px;
+    min-height: 550px;
+    height: 100vh;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -596,7 +599,8 @@ footer .row div {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 600px;
+    min-height: 600px;
+    height: 100vh;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -626,7 +630,7 @@ footer .row div {
   section#social-feeds {
     padding-bottom: 60px;
   }
-  #social-small {
+  l {
     display: none;
   }
   #social-medium {
