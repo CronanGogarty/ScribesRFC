@@ -284,11 +284,11 @@
     <Content Include="Styles\media-min-width-320.min.css">
       <DependentUpon>media-min-width-320.css</DependentUpon>
     </Content>
-    <Content Include="Styles\media-min-width-497.css">
-      <DependentUpon>media-min-width-497.less</DependentUpon>
+    <Content Include="Styles\media-min-width-480.css">
+      <DependentUpon>media-min-width-480.less</DependentUpon>
     </Content>
-    <Content Include="Styles\media-min-width-497.min.css">
-      <DependentUpon>media-min-width-497.css</DependentUpon>
+    <Content Include="Styles\media-min-width-480.min.css">
+      <DependentUpon>media-min-width-480.css</DependentUpon>
     </Content>
     <Content Include="Styles\scribes-rfc.css" />
     <Content Include="Styles\Styles.css">
@@ -329,9 +329,9 @@
     <Content Include="Styles\media-min-width-768.less" />
     <Content Include="Styles\media-min-width-992.less" />
     <Content Include="Styles\media-min-width-1200.less" />
-    <Content Include="Styles\media-min-width-497.less" />
-    <Content Include="Styles\media-min-width-497.css.map">
-      <DependentUpon>media-min-width-497.css</DependentUpon>
+    <Content Include="Styles\media-min-width-480.less" />
+    <Content Include="Styles\media-min-width-480.css.map">
+      <DependentUpon>media-min-width-480.css</DependentUpon>
     </Content>
     <Content Include="Styles\media-min-width-320.less" />
     <Content Include="Styles\media-min-width-320.css.map">

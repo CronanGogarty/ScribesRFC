@@ -1,0 +1,16 @@
+﻿/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-size: auto;
+    background-repeat: repeat-y;
+  }
+  body .header .page-heading {
+    min-height: 500px;
+    height: 100vh;
+  }
+  body .header h1 {
+    font-size: 100px;
+    line-height: 90px;
+  }
+}
+/*# sourceMappingURL=media-min-width-480.css.map */

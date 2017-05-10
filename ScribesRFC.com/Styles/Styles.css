@@ -173,11 +173,11 @@ html.touch .gridImage {
   filter: grayscale(0) contrast(140%) saturate(150%);
 }
 #link-about-scribes-rugby .gridImage {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
   -webkit-filter: brightness(100%);
   -moz-filter: brightness(100%);
   -ms-filter: brightness(100%);
@@ -385,16 +385,20 @@ footer .container {
   clear: both;
 }
 footer .container .row {
-  display: flex;
-  align-items: stretch;
+  /*display:flex;
+    align-items:stretch;*/
 }
 #footer-links-1,
 #footer-links-2 {
-  display: flex;
-  align-items: flex-end;
+  /*display:flex;
+    align-items:flex-end;*/
+}
+#footer-links-1 {
+  text-align: left;
 }
 #footer-links-2 {
-  justify-content: flex-end;
+  /*justify-content:flex-end;*/
+  text-align: right;
 }
 footer .row div {
   text-align: center;
@@ -492,8 +496,23 @@ footer .row div {
 ================================================== */
 /* ==========  Mobile First Method  ========== */
 /* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  #footer-links-1,
+  #footer-links-2 {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  body {
+    /*background-position: center 135px;*/
+  }
+}
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-size: auto;
+    background-repeat: repeat-y;
+  }
   body .header .page-heading {
     min-height: 500px;
     height: 100vh;
@@ -505,6 +524,20 @@ footer .row div {
 }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
+  #scribes-home-nav,
+  #scribes-home-nav .navbar-header {
+    background-color: transparent;
+    margin-bottom: 0;
+    border: none;
+    width: auto;
+    max-width: 100%;
+  }
+  #scribes-home-nav a {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-size: 0.8em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   body {
     background-attachment: fixed;
   }
@@ -543,18 +576,6 @@ footer .row div {
   section#bootstrap-fold .gridItem:nth-child(even) {
     /*outline:1px solid red;
         border-left:@scribes-1px-yellow-border;*/
-  }
-  #scribes-home-nav,
-  #scribes-home-nav .navbar-header {
-    background-color: transparent;
-    margin-bottom: 0;
-    border: none;
-    width: auto;
-    max-width: 100%;
-  }
-  #scribes-home-nav a {
-    font-family: Arial, Verdana, Geneva, sans-serif;
-    font-size: 0.8em;
   }
   .gridLink h3 {
     height: 50px;
@@ -630,7 +651,7 @@ footer .row div {
   section#social-feeds {
     padding-bottom: 60px;
   }
-  l {
+  #social-small {
     display: none;
   }
   #social-medium {
