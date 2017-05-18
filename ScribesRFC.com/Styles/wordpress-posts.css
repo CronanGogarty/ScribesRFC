@@ -18,6 +18,7 @@
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 35px;
   padding-bottom: 25px;
+  max-width: 90vw;
 }
 .width-container .hover-feature-pro {
   position: relative;
@@ -26,7 +27,11 @@
   background-image: none;
   background-repeat: repeat;
   background-attachment: scroll;
+  -moz-background-clip: border-box;
+  -webkit-background-clip: border-box;
   background-clip: border-box;
+  -moz-background-origin: padding-box;
+  -webkit-background-origin: padding-box;
   background-origin: padding-box;
   background-position-x: 0%;
   background-position-y: 0%;
@@ -131,7 +136,9 @@
   font-family: 'Fira Sans', sans-serif;
   color: #fff;
   line-height: 1.1;
+  -ms-word-wrap: break-word;
   word-wrap: break-word;
+  font-size: 25px;
 }
 .width-container .container-blog h2 {
   margin-bottom: 15px;
@@ -191,30 +198,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.width-container .feature-text-pro,
-.width-container a,
-.width-container .play-pro-icon,
-.width-container .social-ico a i,
-.width-container body input.wpcf7-submit,
-.width-container a.ls-sc-button.secondary .ls-sc-button-inner,
-.width-container input#submit,
-.width-container header #search-icon i,
-.width-container #social-author-pro i,
-.width-container #mc_embed_signup input#mc-embedded-subscribe,
-.width-container #carousel-pro li img,
-.width-container #carousel-pro li {
-  -webkit-transition-duration: 125ms;
-  -webkit-transition-property: color, background-color, opacity, border;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-duration: 125ms;
-  -moz-transition-property: color, background-color, opacity, border;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-duration: 125ms;
-  -o-transition-property: color, background-color, opacity, border;
-  -o-transition-timing-function: ease-in-out;
-  transition-duration: 125ms;
-  transition-property: color, background-color, opacity, border;
-}
 .width-container ul.social-ico li a:hover .fa-facebook {
   background-color: #4161a2;
   border-color: #4161a2;
@@ -244,11 +227,67 @@
 .width-container .lastcolumn-progression {
   margin-right: 0% !important;
 }
-.width-container h2.blog-title-pro,
-.width-container .container-blog h2.blog-title-pro,
-.width-container #list-cat-pro h2 {
-  font-size: 25px;
-  letter-spacing: -0.5px;
+.width-container ul.page-numbers {
+  margin: 40px 0px 40px 0px;
+  font-weight: 500;
+  font-family: 'Khand', sans-serif;
+  text-align: center;
+  max-width: 90vw;
+}
+.width-container ul,
+.width-container ol {
+  margin-left: 0px;
+  padding-left: 16px;
+}
+.width-container ol,
+.width-container ul {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+  padding-left: 40px;
+}
+.width-container ul.page-numbers li {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.width-container .page-numbers span.current,
+.width-container .page-numbers a:hover {
+  color: #ffffff;
+  background: #3399cc;
+  border-color: #3399cc;
+}
+.width-container .page-numbers span,
+.width-container .page-numbers a {
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
   font-weight: 400;
+  margin-right: 4px;
+  margin-bottom: 3px;
+  padding: 16px 16px;
+  min-width: 15px;
+  font-size: 15px;
+  background-color: #ffffff;
+  color: #737373;
+  border: 1px solid #d9d9d9;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.width-container .page-numbers a:hover,
+.width-container .page-numbers span.current,
+.width-container body #main .width-container #respond input#submit,
+.width-container body a.progression-button,
+.width-container body input.wpcf7-submit,
+.width-container body input#submit,
+.width-container body a.ls-sc-button.default {
+  background: #1098cf;
+  color: #ffffff;
+}
+.width-container .page-numbers a:hover,
+.width-container .page-numbers span.current {
+  border-color: #1098cf;
 }
 /*# sourceMappingURL=wordpress-posts.css.map */
