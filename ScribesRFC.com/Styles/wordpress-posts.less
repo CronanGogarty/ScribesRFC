@@ -13,7 +13,7 @@
     width: 100%;
     margin: 0 auto;
 
-    @media only screen and (min-width:320px) and (max-width: 480px) {
+    @media only screen and (min-width:320px) and (max-width: 767px) {
         width: 90vw;
     }
 
@@ -21,7 +21,7 @@
         float: left;
         width: 74.5%;
 
-        @media only screen and (min-width:320px) and (max-width: 480px) {
+        @media only screen and (min-width:320px) and (max-width: 767px) {
             width: 100%;
         }
     }
@@ -176,7 +176,7 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
 
-        @media only screen and (min-device-width:320px) and (max-device-width : 480px) {
+        @media only screen and (min-device-width:320px) and (max-device-width : 767px) {
             position: relative;
             float: right;
             text-align: center;
@@ -203,7 +203,7 @@
         margin: 0px 0px 5px 0px;
         padding: 0px 0px 5px 0px;
 
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
             display: inline;
         }
     }
@@ -269,7 +269,7 @@
         margin-right: 3%;
         min-height: 2px;
 
-        @media only screen and (min-width:320px) and (max-width: 480px) {
+        @media only screen and (min-width:320px) and (max-width: 767px) {
             width: 90vw;
         }
     }
@@ -284,17 +284,22 @@
         font-family: 'Khand', sans-serif;
         text-align: center;
         max-width: 90vw;
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            margin:10px 0 40px 0;
+        }
     }
 
     ul, ol {
-        margin-left: 0px;
-        padding-left: 16px;
-    }
-
-    ol, ul {
+        margin-left: 0;
         margin: 1em 0;
         padding: 0 0 0 40px;
-        padding-left: 40px;
+    }
+
+    ul{
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            padding-left:0;
+        }
     }
 
     ul.page-numbers li {
@@ -327,6 +332,10 @@
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
         border-radius: 2px;
+
+        @media only screen and (min-width:320px) and (max-width:767px) {
+            padding:10px 10px;
+        }
     }
 
 
