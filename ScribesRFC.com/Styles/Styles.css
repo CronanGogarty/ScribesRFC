@@ -710,12 +710,22 @@ html {
 }
 .width-container {
   max-width: 1140px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .width-container {
+    width: 90vw;
+  }
 }
 .width-container #content-container {
   float: left;
   width: 74.5%;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .width-container #content-container {
+    width: 100%;
+  }
 }
 .width-container .container-blog {
   border-bottom: 1px solid #ebebeb;
@@ -864,12 +874,17 @@ html {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
-@media ony screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .width-container #sidebar {
-    position: absolute;
+    position: relative;
     float: right;
     text-align: center;
     width: 100%;
+  }
+  .width-container #sidebar .posts-social-text {
+    left: 100%;
+    display: inline-block;
+    position: fixed;
   }
 }
 .width-container #sidebar ul {
@@ -939,6 +954,11 @@ html {
   float: left;
   margin-right: 3%;
   min-height: 2px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .width-container .grid2column-progression {
+    width: 90vw;
+  }
 }
 .width-container .lastcolumn-progression {
   margin-right: 0% !important;
