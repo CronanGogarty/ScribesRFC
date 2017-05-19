@@ -9,7 +9,7 @@
 }
 
 .width-container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 
     #content-container {
@@ -166,6 +166,13 @@
         -ms-word-wrap: break-word;
         word-wrap: break-word;
         overflow-wrap: break-word;
+
+        @media ony screen and (min-device-width:320px) and (max-device-width : 480px) {
+            position:absolute;
+            float:right;
+            text-align: center;
+            width:100%;
+        }
     }
 
     #sidebar ul {
@@ -177,6 +184,10 @@
     #sidebar ul li {
         margin: 0px 0px 5px 0px;
         padding: 0px 0px 5px 0px;
+
+        @media only screen and (min-width: 320px) and (max-width: 480px) {
+            display:inline;
+        }
     }
 
     .social-ico a i {
@@ -271,7 +282,7 @@
         text-transform: uppercase;
     }
 
-    .page-numbers span.current, .page-numbers a:hover {
+    .page-numbers span.current, .page-numbers span:hover {
         color: #ffffff;
         background: #3399cc;
         border-color: #3399cc;

@@ -7,7 +7,7 @@
   -webkit-transition: all 0.2s ease-in-out;
 }
 .width-container {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 .width-container #content-container {
@@ -161,6 +161,14 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+@media ony screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .width-container #sidebar {
+    position: absolute;
+    float: right;
+    text-align: center;
+    width: 100%;
+  }
+}
 .width-container #sidebar ul {
   list-style: none;
   margin: 0px;
@@ -169,6 +177,11 @@
 .width-container #sidebar ul li {
   margin: 0px 0px 5px 0px;
   padding: 0px 0px 5px 0px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .width-container #sidebar ul li {
+    display: inline;
+  }
 }
 .width-container .social-ico a i {
   line-height: 1;
@@ -252,7 +265,7 @@
   text-transform: uppercase;
 }
 .width-container .page-numbers span.current,
-.width-container .page-numbers a:hover {
+.width-container .page-numbers span:hover {
   color: #ffffff;
   background: #3399cc;
   border-color: #3399cc;
