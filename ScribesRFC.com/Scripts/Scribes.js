@@ -40,23 +40,25 @@
                 let searchPost = data[post];
                 try {
                     if (searchPost.featured_media > 0) {
-                        if (searchPost._embedded["wp:featuredmedia"][0]["media_details"]["file"]) {
-                            let nest = searchPost._embedded["wp:featuredmedia"][0]; //var to hold drilldown position
-                            result = nest["media_details"]["file"];
-                            if (post == 0 && nest.media_details.sizes.full.source_url) {
-                                result = nest.media_details.sizes.full.source_url;
-                            }
-                            else {
-                                
-                                if (nest.media_details.sizes['progression-blog']) {
-                                    result = nest.media_details.sizes['progression-blog'].source_url;
+                        if (searchPost._embedded["wp:featuredmedia"][0].source_url) {
+                            nest = searchPost._embedded["wp:featuredmedia"][0]; //var to hold drilldown position
+                            result = nest.source_url;
+                            if (nest["media_details"]["sizes"]) {
+                                if (post == 0 && nest.media_details.sizes.full.source_url) {
+                                    result = nest.media_details.sizes.full.source_url;
                                 }
+                                else {
 
-                                //if (nest.media_details.sizes['full']) {
-                                //    result = nest.media_details.sizes['full'].source_url;
-                                //}
+                                    if (nest.media_details.sizes['progression-blog']) {
+                                        result = nest.media_details.sizes['progression-blog'].source_url;
+                                    }
+
+                                    //if (nest.media_details.sizes['full']) {
+                                    //    result = nest.media_details.sizes['full'].source_url;
+                                    //}
+                                }
                             }
-                        }                        
+                        }
                     }
                 } catch (e) {
                     console.error = e.message;

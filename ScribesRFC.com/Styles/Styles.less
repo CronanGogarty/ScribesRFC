@@ -31,6 +31,8 @@ body {
     /*background-attachment: fixed;*/
     //background-size: auto, cover;
     background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a:link, a:visited, a:hover, a:active, a:focus {
@@ -74,7 +76,7 @@ p {
         display: -ms-flexbox;
         display: flex;
         min-height: 380px;
-        height:100vh;
+        height: 100vh;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
@@ -147,7 +149,7 @@ section#bootstrap-fold .gridItem {
     -ms-filter: grayscale(0) contrast(140%) saturate(150%);
     -o-filter: grayscale(0) contrast(140%) saturate(150%);
     filter: grayscale(0) contrast(140%) saturate(150%);
-    margin:auto;
+    margin: auto;
 
     &:hover {
         -webkit-transform: scale(1.05);
@@ -325,22 +327,24 @@ section#social-feeds .fa {
 }
 
 #social-small {
-    display:block;
+    display: block;
 }
+
 #social-medium {
-        display:none;
-    }
+    display: none;
+}
+
 #social-large {
-    display:none;
+    display: none;
 }
 
 .social-container:nth-of-type(3) {
-    border-right:0;
+    border-right: 0;
 }
 
 .social-container blockquote {
-    padding:0;
-    border:0;
+    padding: 0;
+    border: 0;
 }
 
 #calendar-of-events {
@@ -351,7 +355,7 @@ section#social-feeds .fa {
 
 #calendar-container {
     background-color: transparent;
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
 
 section.white-space {
@@ -429,7 +433,7 @@ footer {
 }
 
 footer .container {
-    clear:both;
+    clear: both;
 }
 
 footer .container .row {
@@ -444,38 +448,37 @@ footer .container .row {
 }
 
 #footer-links-1 {
-    text-align:left;
+    text-align: left;
 }
 
 #footer-links-2 {
     /*justify-content:flex-end;*/
-    text-align:right;
+    text-align: right;
 }
 
 footer .row div {
-    text-align:center;
+    text-align: center;
 }
 
 #div-footer-logo {
-    text-align:center;
-    margin-bottom:20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #footer-logo {
-    margin:0 auto;
-    min-width:233px;
+    margin: 0 auto;
+    min-width: 233px;
 }
 
 #div-copyright {
-    margin-top:20px;
-    
+    margin-top: 20px;
 }
 
 /* override some bootstrap default values */
-.nav>li>a:focus, .nav>li>a:hover {
-    background-color:transparent;
-    text-decoration:underline;
-    color:@scribes-yellow;
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: @scribes-yellow;
 }
 
 #nav-wrapper {
