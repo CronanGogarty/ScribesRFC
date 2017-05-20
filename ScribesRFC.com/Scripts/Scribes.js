@@ -32,7 +32,37 @@
 
             //get the most recent post
             var latestPost = data[0];
-            var featuredMedia = latestPost._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url;
+
+            //get featuredmedia (if it exists) for post index
+            var featuredMedia = function (post) {
+                let result = null;
+                let nest = null;
+                let searchPost = data[post];
+                try {
+                    if (searchPost.featured_media > 0) {
+                        if (searchPost._embedded["wp:featuredmedia"][0]["media_details"]["file"]) {
+                            let nest = searchPost._embedded["wp:featuredmedia"][0]; //var to hold drilldown position
+                            result = nest["media_details"]["file"];
+                            if (post == 0 && nest.media_details.sizes.full.source_url) {
+                                result = nest.media_details.sizes.full.source_url;
+                            }
+                            else {
+                                
+                                if (nest.media_details.sizes['progression-blog']) {
+                                    result = nest.media_details.sizes['progression-blog'].source_url;
+                                }
+
+                                //if (nest.media_details.sizes['full']) {
+                                //    result = nest.media_details.sizes['full'].source_url;
+                                //}
+                            }
+                        }                        
+                    }
+                } catch (e) {
+                    console.error = e.message;
+                }
+                return result;
+            }
             var categories = latestPost._embedded['wp:term'][0];
             var categoriesHTML = '';
             for (let i = 0; i < categories.length; i++) {
@@ -44,7 +74,7 @@
                     categoriesHTML += '<a href="' + categories[i].link + '" rel="category tag">' + categories[i].name + '</a> &#8226; ';
                 }
             }
-            var latestPostHTML = '<article id="paged-pro-feature" class="post-' + latestPost.id + ' post type-post status-publish format-standard has-post-thumbnail hentry category-news category-social-events"><div class="container-blog"><div class="hover-feature-pro"><div class="featured-image-pro"><a href="' + latestPost.link + '" class="video-hover-pro"><img src="' + featuredMedia + '" class="attachment-progression-blog-single size-progression-blog-single wp-post-image img-responsive" style="width:100vw" alt=""></a></div><div class="feature-text-pro"><div class="category-list-pro">' + categoriesHTML + '</div><h2 class="blog-title-pro"><a href="' + latestPost.link + '">' + latestPost.title.rendered + '</a></h2><div class="time-stamp-pro">' + new Date(latestPost.date).toDateString() + '</div><div class="clearfix"></div></div></div></div></article>'
+            var latestPostHTML = '<article id="paged-pro-feature" class="post-' + latestPost.id + ' post type-post status-publish format-standard has-post-thumbnail hentry category-news category-social-events"><div class="container-blog"><div class="hover-feature-pro"><div class="featured-image-pro"><a href="' + latestPost.link + '" class="video-hover-pro"><img src="' + featuredMedia(0) + '" class="attachment-progression-blog-single size-progression-blog-single wp-post-image img-responsive" style="width:100vw" alt=""></a></div><div class="feature-text-pro"><div class="category-list-pro">' + categoriesHTML + '</div><h2 class="blog-title-pro"><a href="' + latestPost.link + '">' + latestPost.title.rendered + '</a></h2><div class="time-stamp-pro">' + new Date(latestPost.date).toDateString() + '</div><div class="clearfix"></div></div></div></div></article>'
             //now apend to the appropriate location in the home/index view
             document.getElementById('paged-index-pro').innerHTML = latestPostHTML;
 
@@ -53,8 +83,8 @@
             var topFourPostsHTML = '';
             for (let i = 0; i < topFourPosts.length; i++) {
                 //TODO:older posts do not have the media_details.sizes['progression-blog'] properties... figure a way to show old and new posts that all show images
-                featuredMedia = topFourPosts[i]._embedded['wp:featuredmedia'][0].media_details.sizes['progression-blog'].source_url;
-                //featuredMedia = topFourPosts[i]._embedded['wp:featuredmedia'][0].media_details.source_url;
+                //var oldfeaturedMedia = topFourPosts[i]._embedded['wp:featuredmedia'][0].media_details.sizes['progression-blog'].source_url;
+                let postMedia = featuredMedia(i + 1);
                 categoriesHTML = '';
                 categories = topFourPosts[i]._embedded['wp:term'][0];
                 for (let j = 0; j < categories.length; j++) {
@@ -68,7 +98,7 @@
                 }
 
                 var isLastColumn = (i % 2 != 0) ? "lastcolumn-progression" : null;
-                topFourPostsHTML += '<div class="infinite-container"><div class="grid2column-progression ' + isLastColumn +'"><article id="post-' + topFourPosts[i].id + '" class="post-' + topFourPosts[i].id + ' post type-post status-publish format-standard has-post-thumbnail hentry category-mens-rugby category-womens-rugby"><div class="container-blog"><div class="featured-image-pro"><a href="' + topFourPosts[i].link + '" class="video-hover-pro"><img src="' + featuredMedia + '" class="attachment-progression-blog size-progression-blog wp-post-image" alt=""></a></div><div class="category-list-pro">' + categoriesHTML + '</div><h2 class="blog-title-pro"><a href="' + topFourPosts[i].link + '">' + topFourPosts[i].title.rendered + '</a></h2><div class="time-stamp-pro">' + new Date(topFourPosts[i].date).toDateString() + '</div><div class="clearfix"></div></div></article></div></div>'
+                topFourPostsHTML += '<div class="infinite-container"><div class="grid2column-progression ' + isLastColumn + '"><article id="post-' + topFourPosts[i].id + '" class="post-' + topFourPosts[i].id + ' post type-post status-publish format-standard has-post-thumbnail hentry category-mens-rugby category-womens-rugby"><div class="container-blog"><div class="featured-image-pro"><a href="' + topFourPosts[i].link + '" class="video-hover-pro"><img src="' + postMedia + '" class="attachment-progression-blog size-progression-blog wp-post-image" alt=""></a></div><div class="category-list-pro">' + categoriesHTML + '</div><h2 class="blog-title-pro"><a href="' + topFourPosts[i].link + '">' + topFourPosts[i].title.rendered + '</a></h2><div class="time-stamp-pro">' + new Date(topFourPosts[i].date).toDateString() + '</div><div class="clearfix"></div></div></article></div></div>'
             }
 
             topFourPostsHTML += '<div class="clearfix"></div>';
