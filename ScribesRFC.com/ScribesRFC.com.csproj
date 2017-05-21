@@ -143,6 +143,10 @@
     <Content Include="Content\Images\Scribes-Mens-Team-Colorized.png" />
     <Content Include="Content\Images\scribes-rugby-crest_homepage-bridge.png" />
     <Content Include="Content\Images\scribes-rugby-vancouver-brand.png" />
+    <Content Include="Content\Images\wp-posts-default-img-200x141.png" />
+    <Content Include="Content\Images\wp-posts-default-img-232x412.png" />
+    <Content Include="Content\Images\wp-posts-default-img-300x344.png" />
+    <Content Include="Content\Images\wp-posts-default-img-300x844.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Fonts\oswald-heavy-webfont.ttf" />
