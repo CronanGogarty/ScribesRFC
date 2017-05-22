@@ -97,6 +97,10 @@ p {
   -ms-flex-align: center;
   align-items: flex-start;
 }
+.header #identity-header {
+  max-height: 100vh;
+  max-width: 100vh;
+}
 .header h1 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -308,6 +312,16 @@ section#social-feeds .fa {
 }
 #social-large {
   display: none;
+}
+.social-container #facebook-feed {
+  max-width: 500px;
+  width: 320px;
+}
+@media only screen and (min-width: 240px) and (max-width: 767px) {
+  .social-container #facebook-feed {
+    width: 90vw;
+    width: 90%;
+  }
 }
 .social-container:nth-of-type(3) {
   border-right: 0;
@@ -526,6 +540,12 @@ footer .row div {
     height: 100vh;
   }
   body .header h1 {
+    /*font-size: 100px;
+                line-height: 90px;*/
+  }
+}
+@media only screen and (min-width: 600px) {
+  h1 {
     font-size: 100px;
     line-height: 90px;
   }
@@ -723,7 +743,8 @@ html {
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .width-container {
-    width: 100vw;
+    max-width: 100vw;
+    width: 90%;
   }
 }
 .width-container #content-container {
@@ -732,7 +753,8 @@ html {
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .width-container #content-container {
-    width: 90%;
+    max-width: 100vw;
+    width: 100%;
   }
 }
 .width-container .container-blog {
@@ -892,7 +914,7 @@ html {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 240px) and (max-width: 767px) {
   .width-container #sidebar {
     position: relative;
     float: right;
@@ -978,9 +1000,10 @@ html {
   margin-right: 3%;
   min-height: 2px;
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 220px) and (max-width: 991px) {
   .width-container .grid2column-progression {
-    width: 90vw;
+    max-width: 90vw;
+    width: 100%;
   }
 }
 .width-container .lastcolumn-progression {
