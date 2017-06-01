@@ -16,6 +16,8 @@
 
         console.log('calling WP Posts...');
 
+        refreshNews(true);
+
         $.ajax({
             method: 'GET',
             url: 'http://www.scribesrfc.com/wp-json/wp/v2/posts?_embed&per_page=5&page=' + pageNumber,
@@ -23,6 +25,7 @@
         })
         .always(function () {
             console.log('WP Done!');
+            refreshNews(false);
         })
         .done(function (data, textStatus, jqXHR) {
             posts = data;
@@ -45,7 +48,11 @@
 
                 let searchPost = data[post];
                 if (post == 0) {
-                    result = 'http://' + host + '/Content/Images/wp-posts-default-img-300x844.png';
+                    //result = 'http://' + host + '/Content/Images/wp-posts-default-img-300x844.png';
+                    result = 'http://' + host + '/Content/Images/ladies-team.png';
+                }
+                else {
+                    result = 'http://' + host + '/Content/Images/wp-posts-default-img-300x344.png';
                 }
                 try {
                     if (searchPost.featured_media > 0) {
@@ -148,10 +155,47 @@
 
     $('#ul-page-numbers').on('click', '.page-numbers', function () {
         console.log('click...');
+
+        var element = document.getElementById("h4-latest-news");
+        element.scrollIntoView();
+
+        location.hash = 'latest-news';
+
         let $this = $(this);
         pageNumber = (parseInt($this.attr('data-page-number'), 10));
         loadPosts();
     });
+
+    function refreshNews(status) {
+        let $animationDiv = $('#animation-div');
+        
+        if (status) {
+            console.log('show animation...');
+            $('#posts-div').hide();
+
+            //location.hash = 'latest-news';
+
+            let protocol = window.location.protocol;
+            let host = window.location.host;
+            let spinner = '<img src="' + protocol + '//' + host + '/Content/Images/loading_spinner.gif" margin:auto;" />';
+            $animationDiv.html(spinner);
+            $animationDiv.css('display', 'block');
+            
+
+            //
+            //let aniPanel = '';
+            //let appendAt = document.getElementById('h4-latest-news');
+            //$(aniPanel).show().appendTo(appendAt);
+        }
+
+        else {
+            console.log('hide animation...');
+            $animationDiv.css('display', 'none');
+            $('#posts-div').show();
+        }
+        
+
+    }
 
     //function loadCategories() {
 

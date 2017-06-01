@@ -137,6 +137,8 @@
     <Content Include="Content\Images\ladies-team-blue.png" />
     <Content Include="Content\Images\ladies-team-dark.png" />
     <Content Include="Content\Images\ladies-team.png" />
+    <Content Include="Content\Images\loader.gif" />
+    <Content Include="Content\Images\loading.gif" />
     <Content Include="Content\Images\scribes-image-grid-frame.png" />
     <Content Include="Content\Images\scribes-ladies-600.png" />
     <Content Include="Content\Images\Scribes-Logo-Transparent-71x100.jpg" />
