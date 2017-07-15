@@ -283,7 +283,9 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Posts.js" />
     <Content Include="Scripts\Scribes.js" />
+    <Content Include="Styles\JockeyProgressionStyle.css" />
     <Content Include="Styles\media-min-width-320.css">
       <DependentUpon>media-min-width-320.less</DependentUpon>
     </Content>
@@ -321,6 +323,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -371,6 +374,8 @@
     <Content Include="Styles\wordpress-posts.css.map">
       <DependentUpon>wordpress-posts.css</DependentUpon>
     </Content>
+    <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Blog\ViewPost.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
