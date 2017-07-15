@@ -57,14 +57,14 @@
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li @ViewBag.NavHome>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <ul class="nav navbar-nav" id="ul_topnav">
+                            @*<li @ViewBag.NavHome>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li @ViewBag.NavNews>@Html.ActionLink("News", "LatestNews", "Home")</li>
                             <li @ViewBag.NavJoin>@Html.ActionLink("Join Scribes", "JoinScribes", "Home")</li>
                             <li @ViewBag.NavMens>@Html.ActionLink("Mens Rugby", "MensRugby", "Home")</li>
                             <li @ViewBag.NavWomens>@Html.ActionLink("Womens Rugby", "WomensRugby", "Home")</li>
                             <li @ViewBag.NavMinis>@Html.ActionLink("Minis Rugby", "MinisRugby", "Home")</li>
-                            <li @ViewBag.NavTag>@Html.ActionLink("Tag Rugby", "TagRugby", "Home")</li>
+                            <li @ViewBag.NavTag>@Html.ActionLink("Tag Rugby", "TagRugby", "Home")</li>*@
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -82,25 +82,25 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-lg-4" id="div-footer-logo"><img id="footer-logo" src="@Url.Content("~/Content/Images/scribes-rugby-crest_homepage-bridge.png")" width="233" height="330" class="img-responsive"></div>
-                <div class="col-xs-12 col-sm-6 col-lg-4" id="footer-links-1">
-                    <ul class="nav">
-                        <li><a href="@Url.Content("~/Pages/Dues/")">Dues</a></li>
-                        <li><a href="@Url.Content("~/Pages/Insurance/")">BC Rugby Insurance Plan</a></li>
-                        <li><a href="@Url.Content("~/Pages/Locations/")">Locations</a></li>
-                        <li><a href="@Url.Content("~/Pages/Sponsors/")">Sponsors</a></li>
-                        <li><a href="@Url.Content("~/Pages/Teams/")">Teams</a></li>
-                        @*<li><a href="@Url.Content("~/Home/")">Link Home</a></li>*@
-                    </ul>
+                <div class="col-xs-12 col-sm-12 col-lg-4" id="div-footer-logo"><img id="footer-logo" src="@Url.Content("~/Content/Images/rugby-canada-logo-233x330.png")" width="233" height="330" class="img-responsive"></div>
+                <div class="col-xs-12 col-sm-6 col-lg-4" id="footer-links-1"><img id="footer-logo" src="@Url.Content("~/Content/Images/scribes-rugby-crest_homepage-bridge.png")" width="233" height="330" class="img-responsive">
+                                        @*<ul class="nav">
+                                <li><a href="@Url.Content("~/Pages/Dues/")">Dues</a></li>
+                                <li><a href="@Url.Content("~/Pages/Insurance/")">BC Rugby Insurance Plan</a></li>
+                                <li><a href="@Url.Content("~/Pages/Locations/")">Locations</a></li>
+                                <li><a href="@Url.Content("~/Pages/Sponsors/")">Sponsors</a></li>
+                                <li><a href="@Url.Content("~/Pages/Teams/")">Teams</a></li>
+                                <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
+                            </ul>*@
                 </div>
-                <div class="col-xs-12 col-sm-6 col-lg-4" id="footer-links-2">
-                    <ul class="nav">
+                <div class="col-xs-12 col-sm-6 col-lg-4" id="footer-links-2"><img id="footer-logo" src="@Url.Content("~/Content/Images/bc-rugby-logo-233x330.png")" width="233" height="330" class="img-responsive">
+                    @*<ul class="nav">
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
                         <li><a href="@Url.Content("~/Home/")">Link Home</a></li>
-                    </ul>
+                    </ul>*@
                 </div>
             </div>
             @*<div class="row">

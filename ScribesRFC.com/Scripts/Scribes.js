@@ -11,6 +11,67 @@
     var pageNumber = 1;
     var btnLoadPostsInit = document.getElementById('btnLoadPostsInit');
 
+    function loadMenu() {
+        $.ajax({
+            method: 'GET',
+            url: 'http://www.scribesrfc.com/wp-json/wp-api-menus/v2/menus/3',
+            dataType:'json'
+        })
+        .always(function () { })
+        .fail(function (errorText) {
+            let errors = [];
+            errors.push(new { url:'', title: 'Menu failed to load - refresh page' });
+            errors.push(new { url: '', title: errorText });
+            buildTopNav(errors);
+            console.log(errorText)
+        })
+        .done(function (data) {
+            if (data.items.length > 0) {
+                buildTopNav(data.items);
+                //buildFooterNav(data.items);
+                console.dir(data);
+            }
+            else {
+                //if no menu is found the plugin returns an empty array
+                let errors = [];
+                errors.push({ url: '', title: 'Menu failed to load - refresh page' });
+                buildTopNav(errors);
+            }
+        })
+    }
+
+    function buildTopNav(data) {
+        let ul_topNav = document.getElementById('ul_topnav');
+        let navList = '';
+        for (var i = 0; i < data.length; i++) {
+            let navItem = '<li><a href="' + data[i].url + '">' + data[i].title + '</a></li>'
+            navList += navItem;
+        }
+        ul_topNav.innerHTML = navList;
+    }
+
+    //this function will output all the menu items into the footer menu
+    //currently not in use as all menu items are displayed in top nav
+    function buildFooterNav(data) {
+        let ul_footerNav = document.getElementById('footer-links-1');
+        let navList = '';
+        for (var i = 0; i < data.length; i++) {
+            let navItem = '<li><a href="' + data[i].url + '">' + data[i].title + '</a></li>'
+            if ((data[i].children) && (data[i].children.length > 0)) {
+                let childer = data[i].children;
+                let childMenu = '<ul>';
+                for (let j = 0; j < childer.length; j++) {
+                    let subNavItem = '<li><a href="' + childer[j].url + '">' + childer[j].title + '</a></li>';
+                    childMenu += subNavItem;
+                }
+                childMenu += '</ul>';
+                navItem += childMenu;
+            }
+            navList += navItem;
+        }
+        ul_footerNav.innerHTML = navList;
+    }
+
     function loadPosts() {
 
         //store the markup in variables
@@ -200,9 +261,36 @@
             $animationDiv.css('display', 'none');
             $('#posts-div').show();
         }
-        
-
     }
+    
+    loadMenu();
+    loadPosts();
+
+    //attach an event handler to the load posts button
+    btnLoadPostsInit.addEventListener('click', function () {
+        
+        loadPosts();
+        console.log('loadPosts called...');
+
+    }, false);
+
+    //capture a click on a post
+    document.getElementById('content-container').addEventListener('click', function (e) {
+        //if (e.target && (e.target.nodeName == 'IMG' || (e.target.nodeName == 'A'))) {
+        //    e.preventDefault();
+        //    console.log('click captured and prevented...');
+
+        //    let host = window.location.host;
+        //    let postRef = function(){
+        //        if (e.parentElement.href) {
+        //            return e.parentElement.href;
+        //        }
+        //    };
+        //    let loadPostURL = host + '/Blog/ViewPost/' + postRef;
+        //    console.log('loadPostURL = ...;\n' + loadPostURL);
+        //    document.location.assign(loadPostURL)
+        //}
+    }, false);
 
     //function loadCategories() {
 
@@ -234,7 +322,6 @@
     //}
 
     //loadCategories();
-    loadPosts();
 
     //$('#grid-mini-rugby').mouseover(function () {
     //    $('#img-grid-mini')
@@ -267,34 +354,6 @@
 
     //     console.log(focusedElement);
     // });
-
-    //attach an event handler to the load posts button
-    btnLoadPostsInit.addEventListener('click', function () {
-        
-        loadPosts();
-        console.log('loadPosts called...');
-
-    }, false);
-
-    //capture a click on a post
-    document.getElementById('content-container').addEventListener('click', function (e) {
-        //if (e.target && (e.target.nodeName == 'IMG' || (e.target.nodeName == 'A'))) {
-        //    e.preventDefault();
-        //    console.log('click captured and prevented...');
-
-        //    let host = window.location.host;
-        //    let postRef = function(){
-        //        if (e.parentElement.href) {
-        //            return e.parentElement.href;
-        //        }
-        //    };
-        //    let loadPostURL = host + '/Blog/ViewPost/' + postRef;
-        //    console.log('loadPostURL = ...;\n' + loadPostURL);
-        //    document.location.assign(loadPostURL)
-        //}
-    }, false);
-
-
 }());
 
 var POSTS = {

@@ -109,6 +109,7 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="Content\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\bc-rugby-logo-233x330.png" />
     <Content Include="Content\Images\Image-Grid\join-scribes-greyscale-720.png" />
     <Content Include="Content\Images\Image-Grid\join-scribes-greyscale.png" />
     <Content Include="Content\Images\Image-Grid\join-scribes-navy-overlay.png" />
@@ -139,6 +140,7 @@
     <Content Include="Content\Images\ladies-team.png" />
     <Content Include="Content\Images\loader.gif" />
     <Content Include="Content\Images\loading.gif" />
+    <Content Include="Content\Images\rugby-canada-logo-233x330.png" />
     <Content Include="Content\Images\scribes-image-grid-frame.png" />
     <Content Include="Content\Images\scribes-ladies-600.png" />
     <Content Include="Content\Images\Scribes-Logo-Transparent-71x100.jpg" />
