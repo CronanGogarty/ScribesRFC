@@ -482,6 +482,7 @@ footer .row div {
 #footer-logo {
     margin: 0 auto;
     min-width: 233px;
+    margin-bottom:30px;
 }
 
 #div-copyright {
@@ -539,6 +540,20 @@ footer .row div {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border-color: @scribes-yellow;
+}
+
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color:@scribes-navy;
+    color:@scribes-yellow;
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color:@scribes-navy;
 }
 
 #scribes-home-nav li.active a {

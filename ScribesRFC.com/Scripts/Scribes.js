@@ -44,7 +44,18 @@
         let ul_topNav = document.getElementById('ul_topnav');
         let navList = '';
         for (var i = 0; i < data.length; i++) {
-            let navItem = '<li><a href="' + data[i].url + '">' + data[i].title + '</a></li>'
+            var navItem = '<li><a href="' + data[i].url + '">' + data[i].title + '</a></li>';
+            if ((data[i].children) && (data[i].children.length > 0)) {
+                navItem = '<li class="dropdown"><a href="' + data[i].url + '" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + data[i].title + ' <b class="caret"></b></a>';
+                let childer = data[i].children;
+                let childMenu = '<ul class="dropdown-menu">';
+                for (let j = 0; j < childer.length; j++) {
+                    let subNavItem = '<li><a href="' + childer[j].url + '">' + childer[j].title + '</a></li>';
+                    childMenu += subNavItem;
+                }
+                childMenu += '</ul></li>';
+                navItem += childMenu;
+            }
             navList += navItem;
         }
         ul_topNav.innerHTML = navList;

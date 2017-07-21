@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Khand');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @font-face {
   font-family: 'oswaldheavy';
   src: url('../Content/Fonts/oswald-heavy-webfont.woff2') format('woff2'), url('../Content/Fonts/oswald-heavy-webfont.woff') format('woff'), url('../Content/Fonts/oswald-heavy-webfont.ttf') format('truetype');
@@ -432,6 +433,7 @@ footer .row div {
 #footer-logo {
   margin: 0 auto;
   min-width: 233px;
+  margin-bottom: 30px;
 }
 #div-copyright {
   margin-top: 20px;
@@ -483,13 +485,25 @@ footer .row div {
 .navbar-default .navbar-form {
   border-color: #ffd600;
 }
+.navbar-default .navbar-nav > li.dropdown:hover > a,
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+  background-color: #003057;
+  color: #ffd600;
+}
+li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  background-color: #003057;
+}
 #scribes-home-nav li.active a {
   background-color: #ffd600;
   color: #003057;
   text-transform: uppercase;
 }
 #scribes-home-nav a {
-  font-family: Arial, Verdana, Geneva, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   margin: 0 1px 0 0;
   text-transform: uppercase;
@@ -561,7 +575,7 @@ footer .row div {
     max-width: 100%;
   }
   #scribes-home-nav a {
-    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
   }
 }
@@ -673,7 +687,7 @@ footer .row div {
     background-color: rgba(0, 48, 87, 0.75);
   }
   #scribes-home-nav a {
-    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.0em;
   }
   section#social-feeds {

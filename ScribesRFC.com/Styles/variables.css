@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Khand');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @font-face {
   font-family: 'oswaldheavy';
   src: url('../Content/Fonts/oswald-heavy-webfont.woff2') format('woff2'), url('../Content/Fonts/oswald-heavy-webfont.woff') format('woff'), url('../Content/Fonts/oswald-heavy-webfont.ttf') format('truetype');
