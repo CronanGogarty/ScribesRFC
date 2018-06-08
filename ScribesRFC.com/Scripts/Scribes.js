@@ -245,6 +245,12 @@
         loadPosts();
     });
 
+    $('.nav').on('click', '.dropdown-menu a', function (e) {
+        e.preventDefault();
+        let target = e.target.getAttribute('href');
+        $('#modal-content').modal('show');
+    });
+
     function refreshNews(status) {
         let $animationDiv = $('#animation-div');
         
