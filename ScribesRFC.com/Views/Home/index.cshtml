@@ -8,7 +8,7 @@
             <h1>SCRIBES RUGBY</h1>
             @*<h2>SCRIBES RFC /<br>EAST VAN /<br>50 YEARS /</h2>*@
             @*<h2>SCRIBES RUGBY FOOTBALL CLUB /<br />VANCOUVER BC /<br />1966 - 2016 /<br />EAST VAN RUGBY /</h2>*@
-            <h2>SCRIBES RUGBY FOOTBALL CLUB<br />VANCOUVER BC<br />1967 - 2017</h2>
+            <h2>SCRIBES RUGBY FOOTBALL CLUB<br />VANCOUVER BC<br />1967 - @DateTime.Now.Year</h2>
         </div>
     </div>
 }
@@ -146,7 +146,7 @@
             <div class="row text-center">
                 <div class="col-xs-12 col-sm-6 col-md-4 remove-padding">
                     @*<a href="@Url.Content("~/Home/JoinScribes/")" id="link-join-scribes-rugby">*@
-                    <a href="http://www.scribesrfc.com/about/recruitment/" id="link-join-scribes-rugby">
+                    <a href="#animatedModal" data-url="http://www.scribesrfc.com/about/recruitment/" id="link-join-scribes-rugby" class="modalLink">
                         <div class="gridItem">
                             <figure>
                                 <img src="@Url.Content("~/Content/Images/Image-Grid/join-scribes-navy-overlay-min.png")" class="img-responsive gridImage" alt="Join Rugby Team Vancouver BC" />

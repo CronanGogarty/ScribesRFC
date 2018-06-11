@@ -396,6 +396,20 @@ section.view-section .col-xs-12 {
   background-size: auto, cover;
   background-repeat: no-repeat;
 }
+#animatedModal {
+  background-color: #003057;
+  border: 1px solid #ffd600;
+  color: #ffd600;
+}
+#animatedModal .close-animatedModal {
+  padding: 1%;
+  text-align: right;
+  border-bottom: 1px solid #ffd600;
+}
+#animatedModal .modal-content {
+  color: #ffd600;
+  padding: 1%;
+}
 footer {
   height: 100%;
   /*height:100vh;*/

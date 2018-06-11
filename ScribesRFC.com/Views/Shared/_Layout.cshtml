@@ -32,6 +32,9 @@
     <!--[if lte IE 6]>
         <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
     <![endif]-->
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
 </head>
 <body class="body">
     <!--[if lt IE 8]>
@@ -78,6 +81,18 @@
 
     @RenderBody()
 
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal">
+            CLOSE MODAL
+        </div>
+
+        <div class="modal-content">
+            <!--Your modal content goes here-->
+            <div id="modal-copy"></div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
@@ -145,6 +160,8 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src=@Url.Content("~/Scripts/animatedModal.min.js")></script>
+
     <script src="@Url.Content("~/Scripts/Scribes.js")" type="text/javascript"></script>
 
     <script>
@@ -172,6 +189,10 @@
     ga('create', 'UA-104437718-1', 'auto');
     ga('send', 'pageview');
 
+    </script>
+
+    <script>
+        $("#demo01").animatedModal();
     </script>
 
 </body>

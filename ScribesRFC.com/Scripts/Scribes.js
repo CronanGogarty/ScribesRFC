@@ -50,7 +50,7 @@
                 let childer = data[i].children;
                 let childMenu = '<ul class="dropdown-menu">';
                 for (let j = 0; j < childer.length; j++) {
-                    let subNavItem = '<li><a href="' + childer[j].url + '">' + childer[j].title + '</a></li>';
+                    let subNavItem = '<li><a href="#animatedModal" class="modalLink" data-page="http://www.scribesrfc.com/wp-json/wp/v2/pages/' + childer[j].id + '/" data-url="' + childer[j].url + '">' + childer[j].title + '</a></li>';
                     childMenu += subNavItem;
                 }
                 childMenu += '</ul></li>';
@@ -59,6 +59,26 @@
             navList += navItem;
         }
         ul_topNav.innerHTML = navList;
+
+        $(".modalLink").animatedModal({
+            modalTarget: "animatedModal",
+            color: "#003057",
+            beforeOpen: function (e) {
+                console.log('.modalLink.animatedModal...');
+                console.dir($(this));
+            }
+        });
+
+        $(".modalLink").on('click', function (e) {
+            let loadUrl = e.target.dataset['page'];
+            $.ajax({
+                method:'GET',
+                url: loadUrl
+            })
+            .done(function (data) {
+                $('#modal-copy').text(data.content);
+            })
+        });
     }
 
     //this function will output all the menu items into the footer menu
